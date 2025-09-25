@@ -1,26 +1,25 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
+/* Body */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #f9f9f9;
   color: #333;
 }
 
-/* HEADER */
+/* Header */
 header {
   background-color: #4a1c6e;
   color: white;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  flex-wrap: wrap;
 }
 
 header .logo {
@@ -37,6 +36,7 @@ header nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 header nav ul li a {
@@ -50,13 +50,14 @@ header nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* MAIN SECTIONS */
+/* Main */
 main {
   max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
+/* Sections */
 .section {
   background-color: white;
   padding: 30px;
@@ -75,7 +76,7 @@ main {
   line-height: 1.5;
 }
 
-/* Imagenes */
+/* Images */
 .section img {
   max-width: 100%;
   border-radius: 8px;
@@ -94,10 +95,10 @@ main {
 }
 
 .jugador img {
-  width: 100%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
   border-radius: 50%;
-  max-width: 150px;
-  height: auto;
   margin-bottom: 10px;
 }
 
@@ -145,7 +146,7 @@ form button:hover {
   background-color: #6c2fa1;
 }
 
-/* FOOTER */
+/* Footer */
 footer {
   background-color: #4a1c6e;
   color: white;

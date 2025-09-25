@@ -1,82 +1,131 @@
-/* Reset default styles */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body e struttura principale */
+/* BODY */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
     color: #333;
+    line-height: 1.6;
 }
 
-/* Header e navigazione */
+/* HEADER */
 header {
-    background-color: #003366; /* Colore blu scuro */
+    background-color: #5c007a;
+    color: #fff;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-header .logo img {
+.logo img {
     height: 60px;
 }
 
-header nav ul {
+nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
 }
 
-header nav ul li {
+nav ul li {
     margin-left: 20px;
 }
 
-header nav ul li a {
+nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
-    text-transform: uppercase;
+    font-weight: bold;
 }
 
-header nav ul li a:hover {
-    color: #f39c12; /* Colore giallo-arancio per hover */
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
-/* Sezione de inicio */
-#home {
-    text-align: center;
-    padding: 50px 20px;
+/* SECTIONS */
+section {
+    padding: 40px 20px;
     background-color: #fff;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 8px;
 }
 
-#home h1 {
-    font-size: 36px;
-    color: #003366;
+h1, h2 {
+    color: #5c007a;
     margin-bottom: 20px;
 }
 
-#home p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 40px;
-}
-
-#home .team-image img {
-    width: 80%;
-    height: auto;
+.main-img {
+    width: 100%;
+    max-width: 800px;
     border-radius: 10px;
+    margin-top: 20px;
 }
 
-/* Footer */
+/* JUGADORES */
+.jugador {
+    margin-bottom: 30px;
+}
+
+.jugador img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.jugador h3 {
+    margin-top: 10px;
+    color: #333;
+}
+
+/* CALENDARIO */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #e0e0e0;
+}
+
+/* FORMULARIO */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #5c007a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #7b1fa2;
+}
+
+/* FOOTER */
 footer {
-    background-color: #003366;
+    background-color: #5c007a;
     color: #fff;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 15px;
 }

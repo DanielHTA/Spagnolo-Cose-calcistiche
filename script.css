@@ -1,0 +1,82 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body e struttura principale */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header e navigazione */
+header {
+    background-color: #003366; /* Colore blu scuro */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+    color: #f39c12; /* Colore giallo-arancio per hover */
+}
+
+/* Sezione de inicio */
+#home {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+#home h1 {
+    font-size: 36px;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+#home .team-image img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

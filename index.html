@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CD Guadalajara - Página de Inicio</title>
+    <title>CD Guadalajara</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
+
+    <!-- HEADER -->
     <header>
         <div class="logo">
             <img src="images/logo.png" alt="CD Guadalajara Logo">
@@ -24,21 +25,108 @@
         </nav>
     </header>
 
-    <!-- Sección de Inicio -->
+    <!-- HOME -->
     <section id="home">
-        <div class="intro">
-            <h1>Bienvenidos al CD Guadalajara</h1>
-            <p>¡La pasión por el fútbol nos une! Somos un club con una rica historia, jugadores excepcionales y un futuro prometedor.</p>
+        <h1>Club Deportivo Guadalajara</h1>
+        <p>Pasión, historia y orgullo. Bienvenidos al sitio oficial del CD Guadalajara.</p>
+        <img src="images/team.jpg" alt="Equipo CD Guadalajara" class="main-img">
+    </section>
+
+    <!-- HISTORIA -->
+    <section id="historia">
+        <h2>Historia del Club</h2>
+        <p>El Club Deportivo Guadalajara fue fundado en 1947 en la ciudad de Guadalajara, Castilla-La Mancha. A lo largo de su historia, el club ha competido en varias categorías del fútbol español, destacando por su espíritu luchador y el apoyo de su afición. En la temporada 2022/23 logró consolidarse en la Primera Federación, buscando siempre nuevos desafíos.</p>
+    </section>
+
+    <!-- JUGADORES -->
+    <section id="jugadores">
+        <h2>Jugadores Principales</h2>
+        <div class="jugador">
+            <img src="images/jugador1.jpg" alt="Jugador 1">
+            <h3>Juan Pérez</h3>
+            <p>Portero - Capitán del equipo, con grandes reflejos y liderazgo.</p>
         </div>
-        <div class="team-image">
-            <img src="images/team.jpg" alt="Equipo CD Guadalajara">
+        <div class="jugador">
+            <img src="images/jugador2.jpg" alt="Jugador 2">
+            <h3>David Sánchez</h3>
+            <p>Delantero - Goleador de la temporada, rápido y técnico.</p>
+        </div>
+        <div class="jugador">
+            <img src="images/jugador3.jpg" alt="Jugador 3">
+            <h3>Luis Gómez</h3>
+            <p>Centrocampista - Cerebro del equipo, especialista en asistencias.</p>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- CALENDARIO -->
+    <section id="calendario">
+        <h2>Calendario y Resultados</h2>
+        <table>
+            <tr>
+                <th>Fecha</th>
+                <th>Rival</th>
+                <th>Resultado</th>
+                <th>Estadio</th>
+            </tr>
+            <tr>
+                <td>01/10/2025</td>
+                <td>CD Toledo</td>
+                <td>2 - 1</td>
+                <td>Pedro Escartín</td>
+            </tr>
+            <tr>
+                <td>08/10/2025</td>
+                <td>Rayo Majadahonda</td>
+                <td>1 - 1</td>
+                <td>Estadio Cerro del Espino</td>
+            </tr>
+            <tr>
+                <td>15/10/2025</td>
+                <td>Atlético Baleares</td>
+                <td>0 - 3</td>
+                <td>Pedro Escartín</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- NOTICIAS -->
+    <section id="noticias">
+        <h2>Últimas Noticias</h2>
+        <article>
+            <h3>Gran victoria en casa</h3>
+            <p>El CD Guadalajara logró una importante victoria 2-1 frente al CD Toledo en un partido lleno de emoción. El gol decisivo fue marcado por David Sánchez en el minuto 87.</p>
+        </article>
+        <article>
+            <h3>Nuevo fichaje para el mediocampo</h3>
+            <p>El club ha confirmado la incorporación de Mario Ruiz, joven talento procedente del Alcorcón, que reforzará el centro del campo para la segunda mitad de la temporada.</p>
+        </article>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br>
+
+            <label for="email">Correo electrónico:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <p>Teléfono: +34 912 345 678</p>
+        <p>Email: contacto@cdguadalajara.es</p>
+        <p>Dirección: Estadio Pedro Escartín, Guadalajara, España</p>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 CD Guadalajara - Todos los derechos reservados.</p>
+        <p>&copy; 2025 CD Guadalajara. Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>
-

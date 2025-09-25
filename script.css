@@ -1,131 +1,155 @@
 /* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* BODY */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
 }
 
 /* HEADER */
 header {
-    background-color: #5c007a;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+  background-color: #4a1c6e;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
 }
 
-.logo img {
-    height: 60px;
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+header .logo img {
+  height: 50px;
 }
 
-nav ul li {
-    margin-left: 20px;
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+header nav ul li a:hover {
+  text-decoration: underline;
 }
 
-/* SECTIONS */
-section {
-    padding: 40px 20px;
-    background-color: #fff;
-    margin: 20px auto;
-    max-width: 1000px;
-    border-radius: 8px;
+/* MAIN SECTIONS */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-h1, h2 {
-    color: #5c007a;
-    margin-bottom: 20px;
+.section {
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
-.main-img {
-    width: 100%;
-    max-width: 800px;
-    border-radius: 10px;
-    margin-top: 20px;
+.section h2 {
+  margin-bottom: 15px;
+  color: #4a1c6e;
 }
 
-/* JUGADORES */
+.section p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Imagenes */
+.section img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Jugadores */
+.jugadores-lista {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .jugador {
-    margin-bottom: 30px;
+  width: 30%;
+  text-align: center;
 }
 
 .jugador img {
-    width: 150px;
-    border-radius: 50%;
+  width: 100%;
+  border-radius: 50%;
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
-.jugador h3 {
-    margin-top: 10px;
-    color: #333;
-}
-
-/* CALENDARIO */
+/* Tabla Calendario */
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
 }
 
 th {
-    background-color: #e0e0e0;
+  background-color: #e8dfff;
+  color: #4a1c6e;
 }
 
-/* FORMULARIO */
+/* Formulario */
+form label {
+  font-weight: bold;
+}
+
 form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 form button {
-    background-color: #5c007a;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: #4a1c6e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
 }
 
 form button:hover {
-    background-color: #7b1fa2;
+  background-color: #6c2fa1;
 }
 
 /* FOOTER */
 footer {
-    background-color: #5c007a;
-    color: #fff;
-    text-align: center;
-    padding: 15px;
+  background-color: #4a1c6e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
 }

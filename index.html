@@ -8,79 +8,100 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Arial', sans-serif;
       line-height: 1.7;
       font-size: 20px; /* Aumento la dimensione del testo */
       scroll-behavior: smooth;
-      color: #333; /* Colore più scuro per il testo principale */
-      background: #fff; /* Sfondo bianco */
+      color: #333;
+      background: #fff;
     }
     header {
       background: linear-gradient(90deg, #e4002b, #ce1126); /* Rosso Chivas */
       color: white;
-      padding: 4rem 1rem; /* Aumento il padding per spaziatura */
+      padding: 5rem 1rem;
       text-align: center;
+      border-bottom: 5px solid #002f6c; /* Aggiungiamo una linea blu */
     }
     header h1 {
       margin: 0;
-      font-size: 4rem; /* Aumento la dimensione del titolo */
+      font-size: 4.5rem; /* Aumento la dimensione del titolo */
+      font-weight: bold;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    }
+    header p {
+      font-size: 1.5rem;
+      font-weight: 300;
     }
     nav {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: #222;
+      background: #002f6c; /* Blu scuro */
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     nav a {
       color: white;
-      padding: 1.2rem 1.8rem; /* Aumento il padding dei link per migliorarne la leggibilità */
+      padding: 1.2rem 2rem;
       text-decoration: none;
-      transition: background 0.3s;
-      font-size: 18px; /* Aumento leggermente la dimensione del testo dei link */
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all 0.3s;
     }
     nav a:hover {
-      background: #ce1126; /* Rosso Chivas per hover */
+      background: #e4002b; /* Rosso Chivas */
+      color: #fff;
+      transform: scale(1.05);
     }
     section {
-      padding: 4rem 1rem;
-      max-width: 1100px;
+      padding: 5rem 2rem;
+      max-width: 1200px;
       margin: auto;
+      transition: background 0.3s;
     }
     section:nth-child(even) {
-      background: #f8f9fa; /* Sfondo più chiaro per sezioni pari */
+      background: #f8f9fa; /* Sfondo chiaro per sezioni pari */
     }
     h2 {
       color: #e4002b; /* Rosso Chivas */
       margin-bottom: 1.5rem;
-      font-size: 2.5rem; /* Aumento la dimensione del sottotitolo */
+      font-size: 2.5rem;
+      font-weight: bold;
     }
     .icon-title {
       display: flex;
       align-items: center;
-      gap: 1rem; /* Aumento lo spazio tra l'icona e il titolo */
+      gap: 1rem;
     }
     .card {
       background: white;
-      border-radius: 8px;
-      padding: 2rem; /* Aumento il padding interno della card */
-      margin: 2rem 0; /* Spazio tra le card */
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
     }
-    ul, ol { margin-left: 2rem; }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    }
+    ul, ol { 
+      margin-left: 2rem; 
+    }
     table {
       border-collapse: collapse;
       width: 100%;
-      margin-top: 1.5rem; /* Aumento il margine superiore */
+      margin-top: 1.5rem;
       box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     }
     th, td {
       border: 1px solid #ddd;
-      padding: 1.2rem; /* Aumento il padding nelle celle */
+      padding: 1.2rem;
       text-align: left;
-      font-size: 18px; /* Aumento la dimensione del testo nelle celle */
+      font-size: 18px;
     }
     th {
       background: #e4002b; /* Rosso Chivas */
@@ -89,14 +110,24 @@
     footer {
       text-align: center;
       padding: 2rem;
-      background: #222;
+      background: #002f6c; /* Blu scuro */
       color: white;
       margin-top: 3rem;
-      font-size: 18px; /* Aumento la dimensione del testo del footer */
+      font-size: 18px;
+      font-weight: 300;
+    }
+    footer a {
+      color: #f5a623; /* Giallo per link */
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
     .player-photo {
-      max-width: 120px; /* Aumento la dimensione delle foto */
+      max-width: 120px;
       border-radius: 50%;
+      border: 4px solid #e4002b; /* Aggiunta un bordo rosso attorno alle foto */
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
@@ -211,6 +242,7 @@
 
   <footer>
     <p>&copy; 2025 Club Deportivo Guadalajara. Todos los derechos reservados.</p>
+    <p><a href="#inicio">Volver arriba</a></p>
   </footer>
 </body>
 </html>

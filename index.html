@@ -1,326 +1,206 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CD Guadalajara</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club Deportivo Guadalajara (Chivas)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* General Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.7;
+      font-size: 18px;
+      scroll-behavior: smooth;
+      color: #222;
+      background: #fefefe;
     }
-
-    h1, h2, h3 {
-      color: #1a1a1a;
-    }
-
-    h2, h3 {
-      margin-bottom: 15px;
-    }
-
-    /* Header */
     header {
-      background-color: #d32f2f;
-      padding: 20px 0;
-      text-align: center;
+      background: linear-gradient(90deg, #e4002b, #ce1126);
       color: white;
+      padding: 3rem 1rem;
+      text-align: center;
     }
-
-    header .logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    header .logo img {
-      width: 50px;
-      height: auto;
-    }
-
     header h1 {
-      font-size: 2rem;
+      margin: 0;
+      font-size: 3rem;
     }
-
-    nav ul {
-      list-style-type: none;
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #222;
       display: flex;
       justify-content: center;
-      gap: 30px;
-      margin-top: 15px;
+      flex-wrap: wrap;
     }
-
     nav a {
       color: white;
+      padding: 0.9rem 1.4rem;
       text-decoration: none;
-      font-size: 1.1rem;
+      transition: background 0.3s;
+      font-size: 17px;
     }
-
     nav a:hover {
-      text-decoration: underline;
+      background: #ce1126;
     }
-
-    /* Main Sections */
-    main {
-      padding: 30px 10%;
+    section {
+      padding: 3rem 1rem;
+      max-width: 1100px;
+      margin: auto;
     }
-
-    .section {
-      margin-bottom: 40px;
+    section:nth-child(even) {
+      background: #f8f9fa;
     }
-
-    .section img {
-      width: 100%;
-      height: auto;
+    h2 {
+      color: #e4002b;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+    .icon-title {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .card {
+      background: white;
       border-radius: 8px;
-      margin-top: 20px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-
-    .jugadores-lista {
-      display: flex;
-      justify-content: space-around;
-      gap: 20px;
-    }
-
-    .jugador {
-      text-align: center;
-      max-width: 200px;
-    }
-
-    .jugador img {
-      width: 100%;
-      height: auto;
-      border-radius: 50%;
-    }
-
-    .jugador h3 {
-      margin-top: 10px;
-      font-size: 1.2rem;
-    }
-
-    /* Calendario */
+    ul, ol { margin-left: 1.5rem; }
     table {
-      width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
+      width: 100%;
+      margin-top: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-
-    table th, table td {
-      padding: 10px;
-      text-align: center;
+    th, td {
       border: 1px solid #ddd;
+      padding: 0.9rem;
+      text-align: left;
     }
-
-    table th {
-      background-color: #d32f2f;
+    th {
+      background: #e4002b;
       color: white;
     }
-
-    table tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-
-    /* Noticias */
-    article {
-      margin-bottom: 20px;
-    }
-
-    article h3 {
-      color: #d32f2f;
-    }
-
-    article p {
-      margin-top: 5px;
-    }
-
-    /* Contact Section */
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    input, textarea {
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    button {
-      background-color: #d32f2f;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #c2185b;
-    }
-
-    /* Footer */
     footer {
-      background-color: #1a1a1a;
-      color: white;
       text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+      padding: 1.5rem;
+      background: #222;
+      color: white;
+      margin-top: 2rem;
+      font-size: 16px;
     }
-
-    footer p {
-      font-size: 0.9rem;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      main {
-        padding: 30px 5%;
-      }
-
-      .jugadores-lista {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      table {
-        font-size: 0.9rem;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 15px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-
-      nav a {
-        font-size: 1rem;
-      }
-
-      table th, table td {
-        padding: 8px;
-      }
-
-      button {
-        padding: 8px 12px;
-        font-size: 0.9rem;
-      }
+    .player-photo {
+      max-width: 100px;
+      border-radius: 50%;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="images/logo.png" alt="Logo CD Guadalajara" />
-      <h1>CD Guadalajara</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#historia">Historia</a></li>
-        <li><a href="#jugadores">Jugadores</a></li>
-        <li><a href="#calendario">Calendario</a></li>
-        <li><a href="#noticias">Noticias</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+    <h1><i class="fa-solid fa-futbol"></i> Club Deportivo Guadalajara</h1>
+    <p>El equipo más grande de México, conocido como las Chivas</p>
   </header>
 
-  <main>
-    <!-- Página de inicio -->
-    <section id="inicio" class="section">
-      <h2>Bienvenidos al Club Deportivo Guadalajara</h2>
-      <p>Un equipo con historia, pasión y compromiso en la Primera Federación española.</p>
-      <img src="images/team.jpg" alt="Equipo CD Guadalajara" />
-    </section>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#historia">Historia</a>
+    <a href="#jugadores">Jugadores</a>
+    <a href="#calendario">Calendario y Resultados</a>
+    <a href="#noticias">Noticias</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-    <!-- Historia del club -->
-    <section id="historia" class="section">
-      <h2>Historia del Club</h2>
-      <p>El Club Deportivo Guadalajara fue fundado en 1947 en la ciudad de Guadalajara, Castilla-La Mancha. Desde sus inicios, ha trabajado con esfuerzo para competir en las categorías superiores del fútbol español, logrando en la temporada 2022/2023 consolidarse en la Primera Federación. El club representa los valores de trabajo, disciplina y orgullo local.</p>
-    </section>
+  <!-- Página de inicio -->
+  <section id="inicio">
+    <div class="icon-title"><i class="fa-solid fa-home"></i><h2>Bienvenidos a Chivas</h2></div>
+    <p>
+      El <strong>Club Deportivo Guadalajara</strong>, mejor conocido como <strong>Chivas</strong>, es uno de los equipos más exitosos y populares del fútbol mexicano. Fundado en 1906, es reconocido por su historia y su mítica camiseta roja y blanca a rayas.
+    </p>
+    <p>
+      Chivas se caracteriza por su política de solo contar con jugadores mexicanos, lo que lo convierte en un emblema del fútbol nacional.
+    </p>
+  </section>
 
-    <!-- Jugadores -->
-    <section id="jugadores" class="section">
-      <h2>Jugadores Principales</h2>
-      <div class="jugadores-lista">
-        <article class="jugador">
-          <img src="images/jugador1.jpg" alt="Juan Pérez" />
-          <h3>Juan Pérez</h3>
-          <p>Portero - Capitán del equipo, reconocido por sus reflejos y liderazgo en el campo.</p>
-        </article>
-        <article class="jugador">
-          <img src="images/jugador2.jpg" alt="David Sánchez" />
-          <h3>David Sánchez</h3>
-          <p>Delantero - Máximo goleador, rápido y con gran precisión en el remate.</p>
-        </article>
-        <article class="jugador">
-          <img src="images/jugador3.jpg" alt="Luis Gómez" />
-          <h3>Luis Gómez</h3>
-          <p>Centrocampista - Motor del equipo, experto en crear oportunidades y asistencias.</p>
-        </article>
-      </div>
-    </section>
+  <!-- Historia del club -->
+  <section id="historia">
+    <div class="icon-title"><i class="fa-solid fa-book"></i><h2>Historia del Club</h2></div>
+    <p>
+      El Club Deportivo Guadalajara fue fundado en 1906 en la ciudad de Guadalajara, Jalisco. A lo largo de su historia, ha ganado múltiples campeonatos de liga y ha forjado una identidad única, que lo distingue como un equipo de gran tradición y pasión.
+    </p>
+    <p>
+      Su lema "La Historia se Hace Grande" refleja su compromiso con el desarrollo del fútbol mexicano, cultivando talento y dejando un legado importante en el deporte.
+    </p>
+  </section>
 
-    <!-- Calendario y resultados -->
-    <section id="calendario" class="section">
-      <h2>Calendario y Resultados</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Fecha</th>
-            <th>Rival</th>
-            <th>Resultado</th>
-            <th>Estadio</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>01/10/2025</td>
-            <td>CD Toledo</td>
-            <td>2 - 1</td>
-            <td>Pedro Escartín</td>
-          </tr>
-          <tr>
-            <td>08/10/2025</td>
-            <td>Rayo Majadahonda</td>
-            <td>1 - 1</td>
-            <td>Cerro del Espino</td>
-          </tr>
-          <tr>
-            <td>15/10/2025</td>
-            <td>Atlético Baleares</td>
-            <td>0 - 3</td>
-            <td>Pedro Escartín</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+  <!-- Jugadores -->
+  <section id="jugadores">
+    <div class="icon-title"><i class="fa-solid fa-users"></i><h2>Jugadores</h2></div>
+    <div class="card">
+      <h3>José Juan Macías</h3>
+      <img class="player-photo" src="https://via.placeholder.com/100" alt="José Juan Macías">
+      <p><strong>Posición:</strong> Delantero</p>
+      <p>José Juan Macías es uno de los jugadores más prometedores de Chivas, conocido por su habilidad de marcar goles y su agilidad en el campo.</p>
+    </div>
+    <div class="card">
+      <h3>Alexis Vega</h3>
+      <img class="player-photo" src="https://via.placeholder.com/100" alt="Alexis Vega">
+      <p><strong>Posición:</strong> Extremo</p>
+      <p>Alexis Vega es un jugador destacado por su velocidad y capacidad de desbordar defensores, siendo un pilar fundamental en el ataque de Chivas.</p>
+    </div>
+  </section>
 
-    <!-- Noticias -->
-    <section id="noticias" class="section">
-      <h2>Noticias</h2>
-      <article>
-        <h3>Gran victoria en casa</h3>
-        <p>El CD Guadalajara ganó 
+  <!-- Calendario y Resultados -->
+  <section id="calendario">
+    <div class="icon-title"><i class="fa-solid fa-calendar"></i><h2>Calendario y Resultados</h2></div>
+    <table>
+      <tr>
+        <th>Fecha</th>
+        <th>Partido</th>
+        <th>Resultado</th>
+      </tr>
+      <tr>
+        <td>10 Octubre 2025</td>
+        <td>Chivas vs Tigres</td>
+        <td>2-1</td>
+      </tr>
+      <tr>
+        <td>15 Octubre 2025</td>
+        <td>América vs Chivas</td>
+        <td>1-1</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Noticias -->
+  <section id="noticias">
+    <div class="icon-title"><i class="fa-solid fa-newspaper"></i><h2>Noticias</h2></div>
+    <div class="card">
+      <h3>Chivas avanza a semifinales</h3>
+      <p>Chivas derrotó a Tigres 2-1 en un partido lleno de emociones, avanzando a las semifinales del torneo mexicano.</p>
+    </div>
+    <div class="card">
+      <h3>Vega se lesiona y podría perderse el próximo partido</h3>
+      <p>Alexis Vega sufrió una lesión durante el entrenamiento, lo que pone en duda su participación en el próximo clásico.</p>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <div class="icon-title"><i class="fa-solid fa-envelope"></i><h2>Contacto</h2></div>
+    <p>Puedes ponerte en contacto con nosotros a través de los siguientes medios:</p>
+    <ul>
+      <li>Email: <a href="mailto:contacto@chivas.com">contacto@chivas.com</a></li>
+      <li>Teléfono: +52 33 1234 5678</li>
+    </ul>
+    <p>O llenar el siguiente formulario:</p>
+    <form>
+      <label for="name">Nombre:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="email">Correo Electrónico:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+      <label for="message">Mensaje:</label><br>
+      <textarea id="message" name="message"

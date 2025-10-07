@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chivas de Corazón</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
@@ -11,6 +11,7 @@
       margin: 0;
       padding: 0;
     }
+
     html, body {
       font-family: 'Roboto', sans-serif;
       background-color: #ffffff;
@@ -18,43 +19,43 @@
       scroll-behavior: smooth;
     }
 
-    header {
+    /* HEADER CON IMMAGINE */
+    header.header-img {
       position: relative;
+      background-image: url('https://www.outlooktravelmag.com/media/Guadalajara-Main-jpg-webp.webp');
+      background-size: cover;
+      background-position: center;
       height: 50vh;
-      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    header video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: auto;
-      height: 100%;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-      z-index: 1;
-    }
-    header .overlay {
+
+    .header-img .overlay {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 2;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1;
     }
-    header .header-content {
+
+    .header-img .header-content {
       position: relative;
-      z-index: 3;
+      z-index: 2;
       color: white;
       text-align: center;
-      padding: 10vh 3vw;
+      padding: 5vh 3vw;
     }
-    header h1 {
-      font-family: 'Montserrat', sans-serif;
+
+    .header-img h1 {
       font-size: 3vw;
       margin-bottom: 1vh;
+      font-family: 'Montserrat', sans-serif;
     }
-    header p {
+
+    .header-img p {
       font-size: 1.5vw;
     }
 
@@ -68,6 +69,7 @@
       top: 0;
       z-index: 10;
     }
+
     nav a {
       color: white;
       text-decoration: none;
@@ -77,6 +79,7 @@
       font-size: 1.2vw;
       transition: color 0.3s;
     }
+
     nav a:hover {
       color: #e4002b;
     }
@@ -86,6 +89,7 @@
       margin: auto;
       padding: 5vh 3vw;
     }
+
     h2 {
       color: #e4002b;
       margin-bottom: 2vh;
@@ -94,6 +98,7 @@
       padding-left: 1vw;
       font-family: 'Montserrat', sans-serif;
     }
+
     p {
       font-size: 1.2vw;
       margin-bottom: 1.5vh;
@@ -106,6 +111,7 @@
       grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
       gap: 3vw;
     }
+
     .jugador {
       text-align: center;
       border: 0.1vw solid #ddd;
@@ -115,10 +121,12 @@
       box-shadow: 0 0.5vh 1vh rgba(0,0,0,0.05);
       transition: transform 0.3s, box-shadow 0.3s;
     }
+
     .jugador:hover {
       transform: translateY(-0.5vh);
       box-shadow: 0 1vh 2vh rgba(0,0,0,0.15);
     }
+
     .jugador img {
       width: 10vw;
       height: 10vw;
@@ -127,10 +135,12 @@
       margin-bottom: 1vh;
       object-fit: cover;
     }
+
     .jugador h4 {
       font-size: 1.4vw;
       margin-bottom: 0.8vh;
     }
+
     .jugador p {
       font-size: 1.0vw;
     }
@@ -141,21 +151,26 @@
       margin-top: 2.5vh;
       font-size: 1.1vw;
     }
+
     .tabla-partidos thead {
       background-color: #002f6c;
       color: white;
     }
+
     .tabla-partidos th, .tabla-partidos td {
       padding: 1vh 0.8vw;
       border: 0.1vw solid #ccc;
       text-align: center;
     }
+
     .tabla-partidos tbody tr:nth-child(even) {
       background-color: #f9f9f9;
     }
+
     .tabla-partidos tbody tr:hover {
       background-color: #f1f1f1;
     }
+
     .proximo {
       font-weight: bold;
       color: #e4002b;
@@ -168,10 +183,12 @@
       border-left: 0.6vw solid #e4002b;
       box-shadow: 0 0.5vh 1vh rgba(0,0,0,0.05);
     }
+
     .noticia h3 {
       margin-bottom: 0.8vh;
       font-size: 1.8vw;
     }
+
     .noticia p {
       font-size: 1.1vw;
     }
@@ -179,12 +196,14 @@
     form {
       margin-top: 2.5vh;
     }
+
     form label {
       display: block;
       font-weight: bold;
       margin-top: 1.5vh;
       font-size: 1.2vw;
     }
+
     input, textarea {
       width: 100%;
       padding: 1.2vh;
@@ -193,6 +212,7 @@
       border-radius: 0.8vw;
       font-size: 1.0vw;
     }
+
     input[type="submit"] {
       background-color: #e4002b;
       color: white;
@@ -205,6 +225,7 @@
       border-radius: 0.8vw;
       transition: background 0.3s;
     }
+
     input[type="submit"]:hover {
       background-color: #c30025;
     }
@@ -217,55 +238,11 @@
       margin-top: 4vh;
       font-size: 1.1vw;
     }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 6vw;
-      }
-      header p {
-        font-size: 3.5vw;
-      }
-      nav a {
-        font-size: 3vw;
-        margin: 0 3vw;
-      }
-      h2 {
-        font-size: 5vw;
-        border-left-width: 2vw;
-      }
-      p, .tabla-partidos, .noticia p {
-        font-size: 3vw;
-      }
-      .jugador img {
-        width: 20vw;
-        height: 20vw;
-      }
-      .jugador h4 {
-        font-size: 3.5vw;
-      }
-      .jugador p {
-        font-size: 2.5vw;
-      }
-      input, textarea {
-        font-size: 3vw;
-      }
-      input[type="submit"] {
-        font-size: 3vw;
-        padding: 1.5vh 3vw;
-      }
-    }
-
   </style>
 </head>
 <body>
 
-  <header>
-    <!-- Video di sfondo (sostituisci src con il tuo video) -->
-    <video autoplay muted loop>
-      <source src="tuo-video-sfondo.mp4" type="video/mp4">
-      <!-- fallback immagine -->
-      Your browser does not support the video tag.
-    </video>
+  <header class="header-img">
     <div class="overlay"></div>
     <div class="header-content">
       <h1>Chivas de Corazón</h1>
@@ -298,17 +275,17 @@
     <h2>Jugadores Principales</h2>
     <div class="jugadores-grid">
       <div class="jugador">
-        <img src="https://via.placeholder.com/150?text=Vega" alt="Alexis Vega">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Alexis_Vega.jpg" alt="Alexis Vega">
         <h4>Alexis Vega</h4>
         <p>Delantero rápido, pieza clave en el ataque rojiblanco.</p>
       </div>
       <div class="jugador">
-        <img src="https://via.placeholder.com/150?text=González" alt="Armando González">
+        <img src="https://via.placeholder.com/150?text=Armando+Gonzalez" alt="Armando González">
         <h4>Armando González</h4>
         <p>Goleador joven con gran instinto ofensivo.</p>
       </div>
       <div class="jugador">
-        <img src="https://via.placeholder.com/150?text=Alvarado" alt="Roberto Alvarado">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Roberto_Alvarado.jpg" alt="Roberto Alvarado">
         <h4>Roberto Alvarado</h4>
         <p>Extremo habilidoso con visión y técnica destacada.</p>
       </div>
@@ -366,22 +343,22 @@
         </tr>
         <tr>
           <td>31 Jul 2025</td>
-          <td>Chivas vs J1 (en Red Bull Arena)</td>
+          <td>Chivas vs J1</td>
           <td>Red Bull Arena</td>
         </tr>
         <tr>
           <td>03 Ago 2025</td>
-          <td>Chivas vs J2 (Bank of America Stadium)</td>
+          <td>Chivas vs J2</td>
           <td>Bank of America Stadium</td>
         </tr>
         <tr>
           <td>07 Ago 2025</td>
-          <td>Chivas vs J3 (TQL Stadium)</td>
+          <td>Chivas vs J3</td>
           <td>TQL Stadium</td>
         </tr>
         <tr>
           <td>10 Ago 2025</td>
-          <td>Chivas vs J4 (TSM Corona)</td>
+          <td>Chivas vs J4</td>
           <td>TSM Corona</td>
         </tr>
       </tbody>
@@ -396,7 +373,7 @@
     </div>
     <div class="noticia">
       <h3>La recuperación de Alexis Vega</h3>
-      <p>Tras una lesión leve, el cuerpo médico informa que Alexis Vega podría estar listo para el próximo clásico contra América. La afición espera verlo de vuelta al once titular.</p>
+      <p>Tras una lesión leve, el cuerpo médico informa que Alexis Vega podría estar listo para el próximo clásico contra América.</p>
     </div>
   </section>
 

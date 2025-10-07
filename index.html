@@ -14,11 +14,7 @@
       --texto: #333;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Roboto', sans-serif;
@@ -40,14 +36,8 @@
       z-index: 1000;
     }
 
-    .navbar .logo img {
-      height: 50px;
-      transition: transform 0.3s;
-    }
-
-    .navbar .logo img:hover {
-      transform: scale(1.05);
-    }
+    .navbar .logo img { height: 50px; transition: transform 0.3s; }
+    .navbar .logo img:hover { transform: scale(1.05); }
 
     .navbar ul {
       list-style: none;
@@ -65,9 +55,7 @@
       transition: color 0.3s;
     }
 
-    .navbar ul li a:hover {
-      color: var(--rojo);
-    }
+    .navbar ul li a:hover { color: var(--rojo); }
 
     /* === HERO HEADER === */
     header.hero {
@@ -103,9 +91,7 @@
       margin-bottom: 1rem;
     }
 
-    header.hero p {
-      font-size: 1.2rem;
-    }
+    header.hero p { font-size: 1.2rem; }
 
     /* === CONTENT SECTIONS === */
     section {
@@ -123,11 +109,7 @@
       margin-bottom: 1.5rem;
     }
 
-    p {
-      margin-bottom: 1rem;
-      text-align: justify;
-      font-size: 1rem;
-    }
+    p { margin-bottom: 1rem; text-align: justify; font-size: 1rem; }
 
     /* === JUGADORES GRID === */
     .jugadores-grid {
@@ -166,10 +148,7 @@
       font-family: 'Montserrat', sans-serif;
     }
 
-    .jugador p {
-      font-size: 0.9rem;
-      color: #555;
-    }
+    .jugador p { font-size: 0.9rem; color: #555; }
 
     /* === TABLAS === */
     .tabla-partidos {
@@ -179,51 +158,70 @@
       font-size: 0.95rem;
     }
 
-    .tabla-partidos thead {
-      background-color: var(--azul);
-      color: white;
-    }
-
+    .tabla-partidos thead { background-color: var(--azul); color: white; }
     .tabla-partidos th, .tabla-partidos td {
       border: 1px solid #ccc;
       padding: 0.8rem;
       text-align: center;
     }
 
-    .tabla-partidos tbody tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-
-    .tabla-partidos tbody tr.proximo {
-      font-weight: bold;
-      color: var(--rojo);
-    }
+    .tabla-partidos tbody tr:nth-child(even) { background-color: #f9f9f9; }
+    .tabla-partidos tbody tr.proximo { font-weight: bold; color: var(--rojo); }
 
     /* === NOTICIAS === */
-    .noticia {
-      background: var(--gris);
-      padding: 1.5rem;
-      border-left: 6px solid var(--rojo);
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    .noticias-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 1.5rem;
     }
 
-    .noticia h3 {
+    .noticia-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .noticia-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .noticia-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .noticia-content {
+      padding: 1.2rem;
+      flex: 1;
+    }
+
+    .noticia-content h3 {
       font-family: 'Montserrat', sans-serif;
       color: var(--azul);
       margin-bottom: 0.5rem;
+      font-size: 1.2rem;
     }
+
+    .noticia-content p { font-size: 0.95rem; color: #555; margin-bottom: 0.8rem; }
+    .noticia-content a {
+      text-decoration: none;
+      color: var(--rojo);
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .noticia-content a:hover { text-decoration: underline; }
 
     /* === FORMULARIO === */
-    form {
-      margin-top: 2rem;
-    }
-
-    form label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
+    form { margin-top: 2rem; }
+    form label { display: block; font-weight: bold; margin-bottom: 0.5rem; }
 
     input, textarea {
       width: 100%;
@@ -245,9 +243,7 @@
       transition: background 0.3s;
     }
 
-    input[type="submit"]:hover {
-      background-color: #c30025;
-    }
+    input[type="submit"]:hover { background-color: #c30025; }
 
     /* === FOOTER === */
     footer {
@@ -257,10 +253,7 @@
       text-align: center;
     }
 
-    .footer-content {
-      max-width: 1000px;
-      margin: auto;
-    }
+    .footer-content { max-width: 1000px; margin: auto; }
 
     .footer-links {
       display: flex;
@@ -277,9 +270,7 @@
       transition: color 0.3s;
     }
 
-    .footer-links a:hover {
-      color: var(--rojo);
-    }
+    .footer-links a:hover { color: var(--rojo); }
 
     .social-icons {
       display: flex;
@@ -288,31 +279,14 @@
       margin-bottom: 1rem;
     }
 
-    .social-icons a {
-      color: white;
-      font-size: 1.3rem;
-      transition: color 0.3s;
-    }
+    .social-icons a { color: white; font-size: 1.3rem; transition: color 0.3s; }
+    .social-icons a:hover { color: var(--rojo); }
 
-    .social-icons a:hover {
-      color: var(--rojo);
-    }
-
-    .footer-copy {
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
+    .footer-copy { font-size: 0.9rem; opacity: 0.8; }
 
     @media (max-width: 768px) {
-      header.hero h1 {
-        font-size: 2rem;
-      }
-
-      nav.navbar ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.8rem;
-      }
+      header.hero h1 { font-size: 2rem; }
+      nav.navbar ul { flex-direction: column; align-items: center; gap: 0.8rem; }
     }
   </style>
 </head>
@@ -341,18 +315,23 @@
     </div>
   </header>
 
-  <!-- Content -->
+  <!-- Inicio -->
   <section id="inicio">
     <h2>Bienvenidos</h2>
     <p>El Club Deportivo Guadalajara, comúnmente llamado Chivas, es uno de los equipos más emblemáticos de México. Fundado en 1906, se distingue por su tradición, su identidad mexicana y su afición leal.</p>
   </section>
 
+  <!-- Historia -->
   <section id="historia">
     <h2>Historia del Club</h2>
-    <p>Desde sus orígenes en Guadalajara, Jalisco, el club ha atravesado etapas de gloria y adversidad. Las Chivas surgieron con la idea de representar los valores del fútbol mexicano y continuar con esos valores hasta nuestros días.</p>
-    <p>En su historia ha cosechado múltiples campeonatos de liga, copas nacionales y participaciones internacionales. Algunos de sus jugadores más destacados han dejado huella en el deporte nacional.</p>
+    <p>El Club Deportivo Guadalajara nació el 8 de mayo de 1906, gracias a un grupo de jóvenes apasionados por el fútbol liderados por Edgar Everaert. Inspirados en equipos europeos, adoptaron los colores rojo, blanco y azul, los mismos que el club “Brugge” de Bélgica, país de origen de Everaert. Así comenzó una historia que pronto trascendería fronteras.</p>
+    <p>Desde sus primeros años, las Chivas se distinguieron por una filosofía única: jugar exclusivamente con futbolistas mexicanos. Esta decisión, mantenida hasta la actualidad, ha forjado una identidad nacionalista y un orgullo sin igual entre su afición.</p>
+    <p>Durante los años 50 y 60, el club vivió su etapa dorada conocida como “El Campeonísimo”, cuando ganó múltiples títulos de liga, copa y campeonatos de CONCACAF. En esa época surgieron leyendas como Salvador Reyes, Jaime “Tubo” Gómez y “Chava” Rodríguez, íconos eternos del fútbol mexicano.</p>
+    <p>A lo largo de su historia, el equipo ha sido cuna de grandes talentos que marcaron generaciones: Benjamín Galindo, Ramón Ramírez, Omar Bravo, Javier “Chicharito” Hernández y muchos más. Además, el Estadio Akron, inaugurado en 2010, se convirtió en una de las sedes más modernas y representativas del país.</p>
+    <p>Más que un club, Chivas representa la pasión, el orgullo y la unidad de millones de aficionados que, sin importar la distancia, sienten el mismo latido rojiblanco en el corazón.</p>
   </section>
 
+  <!-- Jugadores -->
   <section id="jugadores">
     <h2>Jugadores del Primer Equipo</h2>
     <div class="jugadores-grid">
@@ -374,12 +353,11 @@
     </div>
   </section>
 
+  <!-- Calendario -->
   <section id="calendario">
     <h2>Calendario y Resultados</h2>
     <table class="tabla-partidos">
-      <thead>
-        <tr><th>Fecha</th><th>Partido</th><th>Resultado</th></tr>
-      </thead>
+      <thead><tr><th>Fecha</th><th>Partido</th><th>Resultado</th></tr></thead>
       <tbody>
         <tr><td>10 Oct 2025</td><td>Chivas vs Tigres</td><td>2 - 1</td></tr>
         <tr><td>17 Oct 2025</td><td>América vs Chivas</td><td>1 - 1</td></tr>
@@ -388,18 +366,40 @@
     </table>
   </section>
 
+  <!-- Noticias -->
   <section id="noticias">
     <h2>Noticias Recientes</h2>
-    <div class="noticia">
-      <h3>¡Victoria importante en casa!</h3>
-      <p>Chivas venció 2-1 ante Tigres en un encuentro muy disputado. Vega y González anotaron para asegurar los tres puntos.</p>
-    </div>
-    <div class="noticia">
-      <h3>La recuperación de Alexis Vega</h3>
-      <p>El cuerpo médico informa que Alexis Vega podría estar listo para el próximo clásico contra América.</p>
+    <div class="noticias-grid">
+      <div class="noticia-card">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/landscape_16x9/public/2024-04/chivas-vs-tigres.jpg" alt="Victoria ante Tigres">
+        <div class="noticia-content">
+          <h3>¡Victoria importante en casa!</h3>
+          <p>Chivas venció 2-1 ante Tigres en un encuentro muy disputado. Vega y González anotaron para asegurar los tres puntos y mantenerse en la pelea por la liguilla.</p>
+          <a href="#">Leer más →</a>
+        </div>
+      </div>
+
+      <div class="noticia-card">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/landscape_16x9/public/2024-05/alexis-vega-recuperacion.jpg" alt="Alexis Vega">
+        <div class="noticia-content">
+          <h3>La recuperación de Alexis Vega</h3>
+          <p>El cuerpo médico informa que Alexis Vega se encuentra en la última etapa de su recuperación y podría estar listo para el próximo clásico ante América.</p>
+          <a href="#">Leer más →</a>
+        </div>
+      </div>
+
+      <div class="noticia-card">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/landscape_16x9/public/2024-06/entrenamiento-akron.jpg" alt="Entrenamiento">
+        <div class="noticia-content">
+          <h3>Preparación rumbo al próximo encuentro</h3>
+          <p>El equipo entrenó con intensidad en las instalaciones del Estadio Akron, afinando detalles tácticos de cara al enfrentamiento contra Pumas.</p>
+          <a href="#">Leer más →</a>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- Contacto -->
   <section id="contacto">
     <h2>Contacto</h2>
     <p><strong>Email:</strong> contacto@chivas.com.mx</p>
@@ -435,11 +435,8 @@
         <a href="#noticias">Noticias</a>
         <a href="#contacto">Contacto</a>
       </div>
-      <div class="footer-copy">
-        &copy; 2025 Chivas de Corazón. Todos los derechos reservados.
-      </div>
+      <p class="footer-copy">© 2025 Chivas de Corazón. Todos los derechos reservados.</p>
     </div>
   </footer>
-
 </body>
 </html>

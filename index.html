@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chivas de Corazón</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
@@ -15,54 +16,73 @@
     html, body {
       font-family: 'Roboto', sans-serif;
       background-color: #ffffff;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
       color: #333;
       scroll-behavior: smooth;
+      line-height: 1.4;
+      font-size: 0.9vw;
+      /* testi più piccoli */
     }
 
+    /* HEADER CON IMMAGINE */
+    header.header-img {
     header {
-      background: linear-gradient(135deg, #e4002b, #9a001c);
       position: relative;
+      height: 40vh;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-image: url('https://www.outlooktravelmag.com/media/Guadalajara-Main-jpg-webp.webp');
+      background-size: cover;
+      background-position: center;
       height: 50vh;
-      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 5vw;
     }
-    header video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: auto;
-      height: 100%;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-      z-index: 1;
-    }
-    header .overlay {
+
+    .header-img .overlay {
+    header::before {
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 2;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1;
+      inset: 0;
+      background: rgba(228, 0, 43, 0.6); /* overlay rosso semitrasparente */
+      z-index: 0;
     }
-    header .header-content {
+
+    .header-img .header-content {
+    header h1, header p {
       position: relative;
-      z-index: 3;
+      z-index: 2;
       color: white;
       text-align: center;
-      padding: 6vh 3vw;
-      box-shadow: 0 0.5vh 1vh rgba(0,0,0,0.2);
-      padding: 10vh 3vw;
+      padding: 5vh 3vw;
+      z-index: 1;
+      margin-bottom: 0.5vh;
     }
 
-    header h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 4vw;
+    .header-img h1 {
       font-size: 3vw;
       margin-bottom: 1vh;
+      font-family: 'Montserrat', sans-serif;
+    header h1 {
+      font-size: 4vw;
+      font-weight: bold;
     }
 
+    .header-img p {
     header p {
-      font-size: 2vw;
       font-size: 1.5vw;
     }
 
@@ -71,115 +91,131 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      padding: 2vh 0;
       padding: 1.5vh 0;
+      padding: 1vh 0;
       position: sticky;
       top: 0;
-      z-index: 999;
-      box-shadow: 0 0.3vh 0.5vh rgba(0,0,0,0.1);
       z-index: 10;
+      z-index: 1000;
+      font-size: 0.9vw;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 2vw;
       margin: 0 1.5vw;
       font-weight: bold;
       text-transform: uppercase;
-      font-size: 1.5vw;
       font-size: 1.2vw;
       transition: color 0.3s;
     }
 
     nav a:hover {
       color: #e4002b;
+      text-decoration: underline;
     }
 
     section {
       max-width: 90vw;
       margin: auto;
-      padding: 6vh 3vw;
       padding: 5vh 3vw;
+      max-width: 1000px;
+      margin: 3vh auto;
+      padding: 2vh 3vw;
     }
 
     h2 {
       color: #e4002b;
-      margin-bottom: 3vh;
-      font-size: 3vw;
-      border-left: 1vw solid #e4002b;
       margin-bottom: 2vh;
       font-size: 2.5vw;
       border-left: 0.8vw solid #e4002b;
       padding-left: 1vw;
       font-family: 'Montserrat', sans-serif;
+      margin-bottom: 1.5vh;
+      font-size: 2vw;
     }
 
     p {
-      font-size: 1.5vw;
-      margin-bottom: 2vh;
-      line-height: 1.8;
       font-size: 1.2vw;
       margin-bottom: 1.5vh;
       line-height: 1.6;
+      margin-bottom: 1.2vh;
       text-align: justify;
+      font-size: 1vw;
+    }
+    /* Historia ampliada */
+    #historia p {
+      margin-bottom: 1.5vh;
     }
 
+    /* Jugadores */
     .jugadores-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
-      gap: 4vw;
       grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
       gap: 3vw;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 2vw;
+      padding: 2vh 0;
     }
 
     .jugador {
       text-align: center;
-      border: 0.2vw solid #ddd;
-      padding: 2vh;
-      border-radius: 2vw;
       border: 0.1vw solid #ddd;
       padding: 1.5vh;
       border-radius: 1.5vw;
       background: #fafafa;
-      box-shadow: 0 0.8vh 1.5vh rgba(0,0,0,0.05);
       box-shadow: 0 0.5vh 1vh rgba(0,0,0,0.05);
+      border: 1px solid #ddd;
+      border-radius: 1vw;
+      padding: 1.5vh 1vw;
+      background-color: #fff;
+      box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
       transition: transform 0.3s, box-shadow 0.3s;
+      font-size: 0.9vw;
     }
 
     .jugador:hover {
-      transform: translateY(-1vh);
-      box-shadow: 0 1vh 2vh rgba(0,0,0,0.2);
       transform: translateY(-0.5vh);
       box-shadow: 0 1vh 2vh rgba(0,0,0,0.15);
+      box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.15);
     }
 
     .jugador img {
-      width: 12vw;
-      height: 12vw;
       width: 10vw;
       height: 10vw;
+      width: 100%;
+      max-width: 120px;
+      height: auto;
       border-radius: 50%;
-      border: 0.5vw solid #e4002b;
       border: 0.3vw solid #e4002b;
       margin-bottom: 1vh;
       object-fit: cover;
     }
+
     .jugador h4 {
       font-size: 1.4vw;
       margin-bottom: 0.8vh;
-    }
-    .jugador p {
-      font-size: 1.0vw;
+      font-size: 1.1vw;
+      margin-bottom: 0.4vh;
+      font-weight: bold;
     }
 
+    .jugador p {
+      font-size: 1.0vw;
+      font-size: 0.9vw;
+      color: #777;
+      margin: 0;
+    }
+
+    /* Tabella Calendario y Resultados */
     .tabla-partidos {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 3vh;
-      font-size: 1.3vw;
       margin-top: 2.5vh;
       font-size: 1.1vw;
+      margin-top: 2vh;
+      overflow-x: auto;
+      font-size: 0.9vw;
     }
 
     .tabla-partidos thead {
@@ -187,12 +223,11 @@
       color: white;
     }
 
-    .tabla-partidos th,
-    .tabla-partidos td {
-      padding: 1.2vh 1vw;
     .tabla-partidos th, .tabla-partidos td {
       padding: 1vh 0.8vw;
       border: 0.1vw solid #ccc;
+      padding: 0.8vh 1vw;
+      border: 1px solid #ccc;
       text-align: center;
     }
 
@@ -209,53 +244,58 @@
       color: #e4002b;
     }
 
+    /* Noticias */
     .noticia {
-      margin-bottom: 4vh;
-      padding: 2vh;
       margin-bottom: 3vh;
       padding: 1.5vh;
       background: linear-gradient(90deg, #fce4e4, #fff);
-      border-left: 0.8vw solid #e4002b;
       border-left: 0.6vw solid #e4002b;
       box-shadow: 0 0.5vh 1vh rgba(0,0,0,0.05);
+      padding: 1.5vh 2vw;
+      background: #f4f4f4;
+      border-left: 5px solid #e4002b;
+      font-size: 1vw;
     }
 
     .noticia h3 {
-      margin-bottom: 1vh;
-      font-size: 2vw;
       margin-bottom: 0.8vh;
       font-size: 1.8vw;
     }
+
     .noticia p {
       font-size: 1.1vw;
+      margin-bottom: 0.5vh;
+      font-size: 1.4vw;
     }
 
+    /* Formulario de contacto */
     form {
-      margin-top: 3vh;
       margin-top: 2.5vh;
+      margin-top: 2vh;
+      font-size: 1vw;
     }
 
     form label {
       display: block;
       font-weight: bold;
-      margin-top: 2vh;
-      font-size: 1.5vw;
       margin-top: 1.5vh;
       font-size: 1.2vw;
+      margin-top: 1vh;
     }
 
     input, textarea {
       width: 100%;
-      padding: 1.5vh;
-      margin-top: 1vh;
-      border: 0.2vw solid #ccc;
-      border-radius: 1vw;
-      font-size: 1.3vw;
       padding: 1.2vh;
       margin-top: 0.8vh;
       border: 0.1vw solid #ccc;
       border-radius: 0.8vw;
       font-size: 1.0vw;
+      padding: 1vh 1vw;
+      margin-top: 0.3vh;
+      margin-bottom: 1vh;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1vw;
     }
 
     input[type="submit"] {
@@ -264,15 +304,14 @@
       border: none;
       cursor: pointer;
       font-weight: bold;
-      padding: 1.5vh 2vw;
-      font-size: 1.5vw;
-      margin-top: 2vh;
-      border-radius: 1vw;
       padding: 1.2vh 1.5vw;
       font-size: 1.2vw;
       margin-top: 1.5vh;
       border-radius: 0.8vw;
       transition: background 0.3s;
+      padding: 1vh 2vw;
+      font-size: 1vw;
+      transition: background-color 0.3s;
     }
 
     input[type="submit"]:hover {
@@ -283,69 +322,25 @@
       background-color: #002f6c;
       color: white;
       text-align: center;
-      padding: 3vh 2vw;
-      margin-top: 5vh;
-      font-size: 1.3vw;
       padding: 2.5vh 2vw;
+      padding: 2vh 1vw;
       margin-top: 4vh;
       font-size: 1.1vw;
+      font-size: 0.9vw;
     }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 6vw;
-      }
-      header p {
-        font-size: 3.5vw;
-      }
-      nav a {
-        font-size: 3vw;
-        margin: 0 3vw;
-      }
-      h2 {
-        font-size: 5vw;
-        border-left-width: 2vw;
-      }
-      p, .tabla-partidos, .noticia p {
-        font-size: 3vw;
-      }
-      .jugador img {
-        width: 20vw;
-        height: 20vw;
-      }
-      .jugador h4 {
-        font-size: 3.5vw;
-      }
-      .jugador p {
-        font-size: 2.5vw;
-      }
-      input, textarea {
-        font-size: 3vw;
-      }
-      input[type="submit"] {
-        font-size: 3vw;
-        padding: 1.5vh 3vw;
-      }
-    }
-
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Chivas de Corazón</h1>
-    <p>Pasión por el fútbol mexicano y tradición rojiblanca</p>
-    <!-- Video di sfondo (sostituisci src con il tuo video) -->
-    <video autoplay muted loop>
-      <source src="tuo-video-sfondo.mp4" type="video/mp4">
-      <!-- fallback immagine -->
-      Your browser does not support the video tag.
-    </video>
+  <header class="header-img">
     <div class="overlay"></div>
     <div class="header-content">
       <h1>Chivas de Corazón</h1>
       <p>Pasión por el fútbol mexicano y tradición rojiblanca</p>
     </div>
+  <header>
+    <h1>Chivas de Corazón</h1>
+    <p>Pasión por el fútbol mexicano y tradición rojiblanca</p>
   </header>
 
   <nav>
@@ -366,29 +361,131 @@
     <h2>Historia del Club</h2>
     <p>Desde sus orígenes en Guadalajara, Jalisco, el club ha atravesado etapas de gloria y adversidad. Las Chivas surgieron con la idea de representar los valores del fútbol mexicano y continuar con esos valores hasta nuestros días.</p>
     <p>En su historia ha cosechado múltiples campeonatos de liga, copas nacionales y participaciones internacionales. Algunos de sus jugadores más destacados han dejado huella en el deporte nacional.</p>
+    <p>Desde sus orígenes en Guadalajara, Jalisco, el club ha atravesado etapas de gloria y adversidad. Las Chivas surgieron con la idea de representar los valores del fútbol mexicano y continuar con esos valores hasta nuestros días. A lo largo del tiempo, se ha consolidado como uno de los clubes con más seguidores y con éxitos memorables.</p>
+    <p>En su historia ha cosechado múltiples campeonatos de liga, copas nacionales y participaciones internacionales. Algunos de sus jugadores más destacados han dejado huella en el deporte nacional. El estadio Akron, su casa moderna, es un símbolo de la evolución y el presente del equipo.</p>
     <p>Hoy en día, el club busca consolidarse en cada temporada, fomentar la cantera, mantener una identidad sólida y continuar siendo un referente del fútbol mexicano.</p>
   </section>
 
+  <!-- Sección Jugadores con toda la plantilla -->
   <section id="jugadores">
     <h2>Jugadores Principales</h2>
+    <h2>Jugadores del Primer Equipo</h2>
     <div class="jugadores-grid">
+      <!-- Porteros -->
       <div class="jugador">
-        <img src="https://via.placeholder.com/100" alt="Alexis Vega">
-        <img src="https://via.placeholder.com/150?text=Vega" alt="Alexis Vega">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/raul_rangel.jpg?itok=Z3h0aG8u" alt="Raúl Rangel" />
+        <h4>Raúl Rangel</h4>
+        <p>Portero</p>
+      </div>
+      <div class="jugador">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/eduardo_garcia.jpg?itok=Z3h0aG8u" alt="Eduardo García" />
+        <h4>Eduardo García</h4>
+        <p>Portero</p>
+      </div>
+      <!-- Defensores -->
+      <div class="jugador">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/alan_mozo.jpg?itok=Z3h0aG8u" alt="Alan Mozo" />
+        <h4>Alan Mozo</h4>
+        <p>Defensor</p>
+      </div>
+      <div class="jugador">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/gilberto_sepulveda.jpg?itok=Z3h0aG8u" alt="Gilberto Sepúlveda" />
+        <h4>Gilberto Sepúlveda</h4>
+        <p>Defensor</p>
+      </div>
+      <div class="jugador">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/miguel_tapias.jpg?itok=Z3h0aG8u" alt="Miguel Tapias" />
+        <h4>Miguel Tapias</h4>
+        <p>Defensor</p>
+      </div>
+      <div class="jugador">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/jose_castillo.jpg?itok=Z3h0aG8u" alt="José Castillo" />
+        <h4>José Castillo</h4>
+        <p>Defensor</p>
+      </div>
+      <div class="jugador">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/luis_rey.jpg?itok=Z3h0aG8u" alt="Luis Rey" />
+        <h4>Luis Rey</h4>
+        <p>Defensor</p>
+      </div>
+      <div class="jugador">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/mateo_chavez.jpg?itok=Z3h0aG8u" alt="Mateo Chávez" />
+        <h4>Mateo Chávez</h4>
+        <p>Defensor</p>
+      </div>
+      <!-- Centrocampistas -->
+      <div class="jugador">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/omar_govea.jpg?itok=Z3h0aG8u" alt="Omar Govea" />
+        <h4>Omar Govea</h4>
+        <p>Centrocampista</p>
+      </div>
+      <div class="jugador">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/erick_gutierrez.jpg?itok=Z3h0aG8u" alt="Erick Gutiérrez" />
+        <h4>Erick Gutiérrez</h4>
+        <p>Centrocampista</p>
+      </div>
+      <div class="jugador">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/luis_romo.jpg?itok=Z3h0aG8u" alt="Luis Romo" />
+        <h4>Luis Romo</h4>
+        <p>Centrocampista</p>
+      </div>
+      <div class="jugador">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Alexis_Vega.jpg" alt="Alexis Vega">
         <h4>Alexis Vega</h4>
         <p>Delantero rápido, pieza clave en el ataque rojiblanco.</p>
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/fernando_beltran.jpg?itok=Z3h0aG8u" alt="Fernando Beltrán" />
+        <h4>Fernando Beltrán</h4>
+        <p>Centrocampista</p>
       </div>
       <div class="jugador">
-        <img src="https://via.placeholder.com/100" alt="Armando González">
-        <img src="https://via.placeholder.com/150?text=González" alt="Armando González">
+        <img src="https://via.placeholder.com/150?text=Armando+Gonzalez" alt="Armando González">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/ruben_gonzalez.jpg?itok=Z3h0aG8u" alt="Rubén González" />
+        <h4>Rubén González</h4>
+        <p>Centrocampista</p>
+      </div>
+      <div class="jugador">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/yael_padilla.jpg?itok=Z3h0aG8u" alt="Yael Padilla" />
+        <h4>Yael Padilla</h4>
+        <p>Centrocampista</p>
+      </div>
+      <!-- Delanteros -->
+      <div class="jugador">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/javier_hernandez.jpg?itok=Z3h0aG8u" alt="Javier Hernández" />
+        <h4>Javier Hernández</h4>
+        <p>Delantero</p>
+      </div>
+      <div class="jugador">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/cade_cowell.jpg?itok=Z3h0aG8u" alt="Cade Cowell" />
+        <h4>Cade Cowell</h4>
+        <p>Delantero</p>
+      </div>
+      <div class="jugador">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/armando_gonzalez.jpg?itok=Z3h0aG8u" alt="Armando González" />
         <h4>Armando González</h4>
         <p>Goleador joven con gran instinto ofensivo.</p>
+        <p>Delantero</p>
       </div>
       <div class="jugador">
-        <img src="https://via.placeholder.com/100" alt="Roberto Alvarado">
-        <img src="https://via.placeholder.com/150?text=Alvarado" alt="Roberto Alvarado">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Roberto_Alvarado.jpg" alt="Roberto Alvarado">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/roberto_alvarado.jpg?itok=Z3h0aG8u" alt="Roberto Alvarado" />
         <h4>Roberto Alvarado</h4>
         <p>Extremo habilidoso con visión y técnica destacada.</p>
+        <p>Delantero</p>
+      </div>
+      <div class="jugador">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/isaac_brizuela.jpg?itok=Z3h0aG8u" alt="Isaac Brizuela" />
+        <h4>Isaac Brizuela</h4>
+        <p>Delantero</p>
+      </div>
+      <div class="jugador">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/hugo_camberos.jpg?itok=Z3h0aG8u" alt="Hugo Camberos" />
+        <h4>Hugo Camberos</h4>
+        <p>Delantero</p>
+      </div>
+      <div class="jugador">
+        <img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/players/public/2023-01/teun_wilke.jpg?itok=Z3h0aG8u" alt="Teun Wilke" />
+        <h4>Teun Wilke</h4>
+        <p>Delantero</p>
       </div>
     </div>
   </section>
@@ -445,22 +542,21 @@
         <tr>
           <td>31 Jul 2025</td>
           <td>Chivas vs J1</td>
-          <td>Chivas vs J1 (en Red Bull Arena)</td>
           <td>Red Bull Arena</td>
         </tr>
         <tr>
           <td>03 Ago 2025</td>
-          <td>Chivas vs J2 (Bank of America Stadium)</td>
+          <td>Chivas vs J2</td>
           <td>Bank of America Stadium</td>
         </tr>
         <tr>
           <td>07 Ago 2025</td>
-          <td>Chivas vs J3 (TQL Stadium)</td>
+          <td>Chivas vs J3</td>
           <td>TQL Stadium</td>
         </tr>
         <tr>
           <td>10 Ago 2025</td>
-          <td>Chivas vs J4 (TSM Corona)</td>
+          <td>Chivas vs J4</td>
           <td>TSM Corona</td>
         </tr>
       </tbody>
@@ -475,7 +571,7 @@
     </div>
     <div class="noticia">
       <h3>La recuperación de Alexis Vega</h3>
-      <p>Tras una lesión leve, el cuerpo médico informa que Alexis Vega podría estar listo para el próximo clásico contra América. La afición espera verlo de vuelta al once titular.</p>
+      <p>Tras una lesión leve, el cuerpo médico informa que Alexis Vega podría estar listo para el próximo clásico contra América.</p>
     </div>
   </section>
 
@@ -497,9 +593,11 @@
       <input type="submit" value="Enviar">
     </form>
   </section>
+  <!-- Aquí se podrían agregar secciones como Calendario, Noticias y Contacto -->
 
   <footer>
     <p>&copy; 2025 Chivas de Corazón. Todos los derechos reservados.</p>
+    &copy; 2025 Chivas de Corazón. Todos los derechos reservados.
   </footer>
 
 </body>

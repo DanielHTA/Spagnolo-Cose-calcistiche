@@ -3,442 +3,347 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club Deportivo Guadalajara (Chivas)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chivas de Corazón</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
+    body {
+    /* --- Reset y estilos generales --- */
     * {
-      box-sizing: border-box;
       margin: 0;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.7;
+      font-size: 20px; /* Aumento la dimensione del testo */
+      scroll-behavior: smooth;
+      color: #333;
       padding: 0;
+      box-sizing: border-box;
     }
 
-    html, body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #ffffff;
-@@ -20,179 +19,192 @@
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(135deg, #e4002b, #9a001c);
-      position: relative;
-      height: 50vh;
-      overflow: hidden;
-    }
-    header video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: auto;
-      height: 100%;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-      z-index: 1;
-    }
-    header .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 2;
-    }
-    header .header-content {
-      position: relative;
-      z-index: 3;
+      background: linear-gradient(90deg, #e4002b, #ce1126); /* Rosso Chivas */
+      background-color: #e4002b;
       color: white;
+      padding: 5rem 1rem;
       text-align: center;
-      padding: 6vh 3vw;
-      box-shadow: 0 0.5vh 1vh rgba(0,0,0,0.2);
-      padding: 10vh 3vw;
+      border-bottom: 5px solid #002f6c; /* Aggiungiamo una linea blu */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 2rem 1rem;
     }
 
     header h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 4vw;
-      font-size: 3vw;
-      margin-bottom: 1vh;
+      margin: 0;
+      font-size: 4.5rem; /* Aumento la dimensione del titolo */
+      font-weight: bold;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
     }
-
     header p {
-      font-size: 2vw;
-      font-size: 1.5vw;
+      font-size: 1.5rem;
+      font-weight: 300;
+      font-size: 2.5rem;
     }
 
     nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #002f6c; /* Blu scuro */
       background-color: #002f6c;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      padding: 2vh 0;
-      padding: 1.5vh 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
       position: sticky;
       top: 0;
-      z-index: 999;
-      box-shadow: 0 0.3vh 0.5vh rgba(0,0,0,0.1);
       z-index: 10;
     }
 
     nav a {
       color: white;
+      padding: 1.2rem 2rem;
       text-decoration: none;
-      margin: 0 2vw;
-      margin: 0 1.5vw;
+      font-size: 18px;
+      margin: 0 1.5rem;
       font-weight: bold;
       text-transform: uppercase;
-      font-size: 1.5vw;
-      font-size: 1.2vw;
-      transition: color 0.3s;
+      transition: all 0.3s;
+      font-size: 0.9rem;
     }
 
     nav a:hover {
-      color: #e4002b;
+      background: #f5a623; /* Giallo per hover */
+      color: #fff;
+      transform: scale(1.05);
+      text-decoration: underline;
     }
 
     section {
-      max-width: 90vw;
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      padding: 3rem 2rem;
+      max-width: 1000px;
       margin: auto;
-      padding: 6vh 3vw;
-      padding: 5vh 3vw;
+      transition: background 0.3s;
+    }
+    section:nth-child(even) {
+      background: #f8f9fa; /* Sfondo chiaro per sezioni pari */
     }
 
     h2 {
+      color: #e4002b; /* Rosso Chivas */
       color: #e4002b;
-      margin-bottom: 3vh;
-      font-size: 3vw;
-      border-left: 1vw solid #e4002b;
-      margin-bottom: 2vh;
-      font-size: 2.5vw;
-      border-left: 0.8vw solid #e4002b;
-      padding-left: 1vw;
-      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 1.5rem;
+      font-size: 2.5rem;
+      font-weight: bold;
+      font-size: 1.8rem;
     }
+    .icon-title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
 
-    p {
-      font-size: 1.5vw;
-      margin-bottom: 2vh;
-      line-height: 1.8;
-      font-size: 1.2vw;
-      margin-bottom: 1.5vh;
-      line-height: 1.6;
-      text-align: justify;
-    }
-
+    /* --- Jugadores --- */
     .jugadores-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
-      gap: 4vw;
-      grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
-      gap: 3vw;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
     }
+    .card {
+      background: white;
 
     .jugador {
       text-align: center;
-      border: 0.2vw solid #ddd;
-      padding: 2vh;
-      border-radius: 2vw;
-      border: 0.1vw solid #ddd;
-      padding: 1.5vh;
-      border-radius: 1.5vw;
-      background: #fafafa;
-      box-shadow: 0 0.8vh 1.5vh rgba(0,0,0,0.05);
-      box-shadow: 0 0.5vh 1vh rgba(0,0,0,0.05);
-      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid #eee;
+      padding: 1rem;
+      border-radius: 10px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      transition: transform 0.2s;
     }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
 
     .jugador:hover {
-      transform: translateY(-1vh);
-      box-shadow: 0 1vh 2vh rgba(0,0,0,0.2);
-      transform: translateY(-0.5vh);
-      box-shadow: 0 1vh 2vh rgba(0,0,0,0.15);
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
+    ul, ol { 
+      margin-left: 2rem; 
 
     .jugador img {
-      width: 12vw;
-      height: 12vw;
-      width: 10vw;
-      height: 10vw;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
-      border: 0.5vw solid #e4002b;
-      border: 0.3vw solid #e4002b;
-      margin-bottom: 1vh;
-      object-fit: cover;
-    }
-    .jugador h4 {
-      font-size: 1.4vw;
-      margin-bottom: 0.8vh;
-    }
-    .jugador p {
-      font-size: 1.0vw;
+      border: 3px solid #e4002b;
+      margin-bottom: 0.5rem;
     }
 
-    .tabla-partidos {
-      width: 100%;
+    /* --- Calendario --- */
+    table {
       border-collapse: collapse;
-      margin-top: 3vh;
-      font-size: 1.3vw;
-      margin-top: 2.5vh;
-      font-size: 1.1vw;
-    }
-
-    .tabla-partidos thead {
-      background-color: #002f6c;
-      color: white;
-    }
-
-    .tabla-partidos th,
-    .tabla-partidos td {
-      padding: 1.2vh 1vw;
-    .tabla-partidos th, .tabla-partidos td {
-      padding: 1vh 0.8vw;
-      border: 0.1vw solid #ccc;
-      text-align: center;
-    }
-
-    .tabla-partidos tbody tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-
-    .tabla-partidos tbody tr:hover {
-      background-color: #f1f1f1;
-    }
-
-    .proximo {
-      font-weight: bold;
-      color: #e4002b;
-    }
-
-    .noticia {
-      margin-bottom: 4vh;
-      padding: 2vh;
-      margin-bottom: 3vh;
-      padding: 1.5vh;
-      background: linear-gradient(90deg, #fce4e4, #fff);
-      border-left: 0.8vw solid #e4002b;
-      border-left: 0.6vw solid #e4002b;
-      box-shadow: 0 0.5vh 1vh rgba(0,0,0,0.05);
-    }
-
-    .noticia h3 {
-      margin-bottom: 1vh;
-      font-size: 2vw;
-      margin-bottom: 0.8vh;
-      font-size: 1.8vw;
-    }
-    .noticia p {
-      font-size: 1.1vw;
-    }
-
-    form {
-      margin-top: 3vh;
-      margin-top: 2.5vh;
-    }
-
-    form label {
-      display: block;
-      font-weight: bold;
-      margin-top: 2vh;
-      font-size: 1.5vw;
-      margin-top: 1.5vh;
-      font-size: 1.2vw;
-    }
-
-    input, textarea {
       width: 100%;
-      padding: 1.5vh;
-      margin-top: 1vh;
-      border: 0.2vw solid #ccc;
-      border-radius: 1vw;
-      font-size: 1.3vw;
-      padding: 1.2vh;
-      margin-top: 0.8vh;
-      border: 0.1vw solid #ccc;
-      border-radius: 0.8vw;
-      font-size: 1.0vw;
+      margin-top: 1.5rem;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      border-collapse: collapse;
+      margin-top: 1rem;
     }
 
-    input[type="submit"] {
-      background-color: #e4002b;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-      padding: 1.5vh 2vw;
-      font-size: 1.5vw;
-      margin-top: 2vh;
-      border-radius: 1vw;
-      padding: 1.2vh 1.5vw;
-      font-size: 1.2vw;
-      margin-top: 1.5vh;
-      border-radius: 0.8vw;
-      transition: background 0.3s;
+    th, td {
+      padding: 1rem;
+      border: 1px solid #ddd;
+      padding: 1.2rem;
+      text-align: left;
+      font-size: 18px;
+      text-align: center;
     }
 
-    input[type="submit"]:hover {
-      background-color: #c30025;
-    }
-@@ -201,17 +213,64 @@
+    th {
+      background: #e4002b; /* Rosso Chivas */
       background-color: #002f6c;
       color: white;
+    }
+
+    footer {
       text-align: center;
-      padding: 3vh 2vw;
-      margin-top: 5vh;
-      font-size: 1.3vw;
-      padding: 2.5vh 2vw;
-      margin-top: 4vh;
-      font-size: 1.1vw;
+      padding: 2rem;
+      background: #002f6c; /* Blu scuro */
+      background: #002f6c;
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+      font-size: 18px;
+      font-weight: 300;
     }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 6vw;
-      }
-      header p {
-        font-size: 3.5vw;
-      }
-      nav a {
-        font-size: 3vw;
-        margin: 0 3vw;
-      }
-      h2 {
-        font-size: 5vw;
-        border-left-width: 2vw;
-      }
-      p, .tabla-partidos, .noticia p {
-        font-size: 3vw;
-      }
-      .jugador img {
-        width: 20vw;
-        height: 20vw;
-      }
-      .jugador h4 {
-        font-size: 3.5vw;
-      }
-      .jugador p {
-        font-size: 2.5vw;
-      }
-      input, textarea {
-        font-size: 3vw;
-      }
-      input[type="submit"] {
-        font-size: 3vw;
-        padding: 1.5vh 3vw;
-      }
+    footer a {
+      color: #f5a623; /* Giallo per link */
+      text-decoration: none;
     }
-
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .player-photo {
+      max-width: 120px;
+      border-radius: 50%;
+      border: 4px solid #e4002b; /* Aggiunta un bordo rosso attorno alle foto */
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
   </style>
 </head>
 <body>
 
   <header>
+    <h1><i class="fa-solid fa-futbol"></i> Club Deportivo Guadalajara</h1>
+    <p>El equipo más grande de México, conocido como las Chivas</p>
     <h1>Chivas de Corazón</h1>
-    <p>Pasión por el fútbol mexicano y tradición rojiblanca</p>
-    <!-- Video di sfondo (sostituisci src con il tuo video) -->
-    <video autoplay muted loop>
-      <source src="tuo-video-sfondo.mp4" type="video/mp4">
-      <!-- fallback immagine -->
-      Your browser does not support the video tag.
-    </video>
-    <div class="overlay"></div>
-    <div class="header-content">
-      <h1>Chivas de Corazón</h1>
-      <p>Pasión por el fútbol mexicano y tradición rojiblanca</p>
-    </div>
+    <p>Pasión por el fútbol mexicano</p>
   </header>
 
   <nav>
-@@ -239,17 +298,17 @@
-    <h2>Jugadores Principales</h2>
+    <a href="#inicio">Inicio</a>
+    <a href="#historia">Historia</a>
+    <a href="#jugadores">Jugadores</a>
+    <a href="#calendario">Calendario y Resultados</a>
+    <a href="#noticias">Noticias</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#calendario">Partidos</a>
+  </nav>
+
+  <!-- Página de inicio -->
+  <section id="inicio">
+    <div class="icon-title"><i class="fa-solid fa-home"></i><h2>Bienvenidos a Chivas</h2></div>
+    <p>
+      El <strong>Club Deportivo Guadalajara</strong>, mejor conocido como <strong>Chivas</strong>, es uno de los equipos más exitosos y populares del fútbol mexicano. Fundado en 1906, es reconocido por su historia y su mítica camiseta roja y blanca a rayas.
+    </p>
+    <p>
+      Chivas se caracteriza por su política de solo contar con jugadores mexicanos, lo que lo convierte en un emblema del fútbol nacional.
+    </p>
+  </section>
+
+  <!-- Historia del club -->
+  <section id="historia">
+    <div class="icon-title"><i class="fa-solid fa-book"></i><h2>Historia del Club</h2></div>
+    <p>
+      El Club Deportivo Guadalajara fue fundado en 1906 en la ciudad de Guadalajara, Jalisco. A lo largo de su historia, ha ganado múltiples campeonatos de liga y ha forjado una identidad única, que lo distingue como un equipo de gran tradición y pasión.
+    </p>
+    <p>
+      Su lema "La Historia se Hace Grande" refleja su compromiso con el desarrollo del fútbol mexicano, cultivando talento y dejando un legado importante en el deporte.
+    </p>
+    <h2>Bienvenidos</h2>
+    <p>El Club Deportivo Guadalajara, conocido como Chivas, es uno de los equipos más emblemáticos de México. Fundado en 1906, destaca por su política única de jugar solo con futbolistas mexicanos.</p>
+  </section>
+
+  <!-- Jugadores -->
+  <section id="jugadores">
+    <div class="icon-title"><i class="fa-solid fa-users"></i><h2>Jugadores</h2></div>
+    <div class="card">
+      <h3>José Juan Macías</h3>
+      <img class="player-photo" src="https://via.placeholder.com/120" alt="José Juan Macías">
+      <p><strong>Posición:</strong> Delantero</p>
+      <p>José Juan Macías es uno de los jugadores más prometedores de Chivas, conocido por su habilidad de marcar goles y su agilidad en el campo.</p>
+    </div>
+    <div class="card">
+      <h3>Alexis Vega</h3>
+      <img class="player-photo" src="https://via.placeholder.com/120" alt="Alexis Vega">
+      <p><strong>Posición:</strong> Extremo</p>
+      <p>Alexis Vega es un jugador destacado por su velocidad y capacidad de desbordar defensores, siendo un pilar fundamental en el ataque de Chivas.</p>
+    <h2>Jugadores Destacados</h2>
     <div class="jugadores-grid">
       <div class="jugador">
-        <img src="https://via.placeholder.com/100" alt="Alexis Vega">
-        <img src="https://via.placeholder.com/150?text=Vega" alt="Alexis Vega">
+        <img src="https://via.placeholder.com/100" alt="Jugador 1">
         <h4>Alexis Vega</h4>
-        <p>Delantero rápido, pieza clave en el ataque rojiblanco.</p>
+        <p>Delantero</p>
       </div>
       <div class="jugador">
-        <img src="https://via.placeholder.com/100" alt="Armando González">
-        <img src="https://via.placeholder.com/150?text=González" alt="Armando González">
-        <h4>Armando González</h4>
-        <p>Goleador joven con gran instinto ofensivo.</p>
-      </div>
-      <div class="jugador">
-        <img src="https://via.placeholder.com/100" alt="Roberto Alvarado">
-        <img src="https://via.placeholder.com/150?text=Alvarado" alt="Roberto Alvarado">
+        <img src="https://via.placeholder.com/100" alt="Jugador 2">
         <h4>Roberto Alvarado</h4>
-        <p>Extremo habilidoso con visión y técnica destacada.</p>
+        <p>Extremo</p>
       </div>
-@@ -282,6 +341,11 @@
-          <td>Chivas vs Pumas</td>
-          <td>Próximo</td>
-        </tr>
-        <tr class="proximo">
-          <td>01 Nov 2025</td>
-          <td>Pachuca vs Chivas</td>
-          <td>Próximo</td>
-        </tr>
-      </tbody>
-    </table>
+      <div class="jugador">
+        <img src="https://via.placeholder.com/100" alt="Jugador 3">
+        <h4>Armando González</h4>
+        <p>Delantero</p>
+      </div>
+    </div>
+  </section>
 
-@@ -302,46 +366,62 @@
-        </tr>
-        <tr>
-          <td>31 Jul 2025</td>
-          <td>Chivas vs J1</td>
-          <td>Chivas vs J1 (en Red Bull Arena)</td>
-          <td>Red Bull Arena</td>
-        </tr>
-        <tr>
-          <td>03 Ago 2025</td>
-          <td>Chivas vs J2 (Bank of America Stadium)</td>
-          <td>Bank of America Stadium</td>
-        </tr>
-        <tr>
-          <td>07 Ago 2025</td>
-          <td>Chivas vs J3 (TQL Stadium)</td>
-          <td>TQL Stadium</td>
-        </tr>
-        <tr>
-          <td>10 Ago 2025</td>
-          <td>Chivas vs J4 (TSM Corona)</td>
-          <td>TSM Corona</td>
-        </tr>
-      </tbody>
+  <!-- Calendario y Resultados -->
+  <section id="calendario">
+    <div class="icon-title"><i class="fa-solid fa-calendar"></i><h2>Calendario y Resultados</h2></div>
+    <h2>Calendario de Partidos</h2>
+    <table>
+      <tr>
+        <th>Fecha</th>
+        <th>Partido</th>
+        <th>Resultado</th>
+      </tr>
+      <tr>
+        <td>10 Octubre 2025</td>
+        <td>Chivas vs Tigres</td>
+        <td>2-1</td>
+      </tr>
+      <tr>
+        <td>15 Octubre 2025</td>
+        <td>17 Octubre 2025</td>
+        <td>América vs Chivas</td>
+        <td>1-1</td>
+      </tr>
+      <tr>
+        <td>24 Octubre 2025</td>
+        <td>Chivas vs Pumas</td>
+        <td>Próximo</td>
+      </tr>
     </table>
   </section>
 
+  <!-- Noticias -->
   <section id="noticias">
-    <h2>Noticias Recientes</h2>
-    <div class="noticia">
-      <h3>¡Victoria importante en casa!</h3>
-      <p>Chivas venció con un marcador 2-1 ante Tigres en un encuentro muy disputado. Vega y González anotaron para asegurar los tres puntos.</p>
+    <div class="icon-title"><i class="fa-solid fa-newspaper"></i><h2>Noticias</h2></div>
+    <div class="card">
+      <h3>Chivas avanza a semifinales</h3>
+      <p>Chivas derrotó a Tigres 2-1 en un partido lleno de emociones, avanzando a las semifinales del torneo mexicano.</p>
     </div>
-    <div class="noticia">
-      <h3>La recuperación de Alexis Vega</h3>
-      <p>Tras una lesión leve, el cuerpo médico informa que Alexis Vega podría estar listo para el próximo clásico contra América. La afición espera verlo de vuelta al once titular.</p>
+    <div class="card">
+      <h3>Vega se lesiona y podría perderse el próximo partido</h3>
+      <p>Alexis Vega sufrió una lesión durante el entrenamiento, lo que pone en duda su participación en el próximo clásico.</p>
     </div>
   </section>
 
+  <!-- Contacto -->
   <section id="contacto">
-    <h2>Contacto</h2>
-    <p><strong>Email:</strong> contacto@chivas.com.mx</p>
-    <p><strong>Teléfono:</strong> +52 33 1234 5678</p>
-
+    <div class="icon-title"><i class="fa-solid fa-envelope"></i><h2>Contacto</h2></div>
+    <p>Puedes ponerte en contacto con nosotros a través de los siguientes medios:</p>
+    <ul>
+      <li>Email: <a href="mailto:contacto@chivas.com">contacto@chivas.com</a></li>
+      <li>Teléfono: +52 33 1234 5678</li>
+    </ul>
+    <p>O llenar el siguiente formulario:</p>
     <form>
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required>
-
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="mensaje">Mensaje:</label>
-      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
+      <label for="name">Nombre:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="email">Correo Electrónico:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+      <label for="message">Mensaje:</label><br>
+      <textarea id="message" name="message" rows="4" required></textarea><br><br>
       <input type="submit" value="Enviar">
     </form>
   </section>
 
   <footer>
+    <p>&copy; 2025 Club Deportivo Guadalajara. Todos los derechos reservados.</p>
+    <p><a href="#inicio">Volver arriba</a></p>
     <p>&copy; 2025 Chivas de Corazón. Todos los derechos reservados.</p>
   </footer>
 

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chivas de Corazón</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -11,27 +12,58 @@
       padding: 0;
     }
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      background-color: #fff;
+    html, body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #ffffff;
       color: #333;
-      line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
     header {
-      background-color: #e4002b;
+      background: linear-gradient(135deg, #e4002b, #9a001c);
+      position: relative;
+      height: 50vh;
+      overflow: hidden;
+    }
+    header video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: auto;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: 1;
+    }
+    header .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+    header .header-content {
+      position: relative;
+      z-index: 3;
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 6vh 3vw;
+      box-shadow: 0 0.5vh 1vh rgba(0,0,0,0.2);
+      padding: 10vh 3vw;
     }
 
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 4vw;
+      font-size: 3vw;
+      margin-bottom: 1vh;
     }
+
     header p {
-      font-size: 1.2rem;
+      font-size: 2vw;
+      font-size: 1.5vw;
     }
 
     nav {
@@ -39,143 +71,191 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      padding: 1rem;
+      padding: 2vh 0;
+      padding: 1.5vh 0;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 999;
+      box-shadow: 0 0.3vh 0.5vh rgba(0,0,0,0.1);
+      z-index: 10;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 1.2rem;
+      margin: 0 2vw;
+      margin: 0 1.5vw;
       font-weight: bold;
       text-transform: uppercase;
-      font-size: 0.9rem;
+      font-size: 1.5vw;
+      font-size: 1.2vw;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #e4002b;
     }
 
     section {
-      max-width: 1000px;
+      max-width: 90vw;
       margin: auto;
-      padding: 3rem 1.5rem;
+      padding: 6vh 3vw;
+      padding: 5vh 3vw;
     }
 
     h2 {
       color: #e4002b;
-      margin-bottom: 1.5rem;
-      font-size: 1.8rem;
+      margin-bottom: 3vh;
+      font-size: 3vw;
+      border-left: 1vw solid #e4002b;
+      margin-bottom: 2vh;
+      font-size: 2.5vw;
+      border-left: 0.8vw solid #e4002b;
+      padding-left: 1vw;
+      font-family: 'Montserrat', sans-serif;
     }
 
     p {
-      margin-bottom: 1rem;
-    }
-
-    /* Sezione Historia ampliata */
-    #historia p {
-      margin-bottom: 1.2rem;
+      font-size: 1.5vw;
+      margin-bottom: 2vh;
+      line-height: 1.8;
+      font-size: 1.2vw;
+      margin-bottom: 1.5vh;
+      line-height: 1.6;
       text-align: justify;
     }
 
-    /* Jugadores */
     .jugadores-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+      gap: 4vw;
+      grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+      gap: 3vw;
     }
 
     .jugador {
       text-align: center;
-      border: 1px solid #ddd;
-      padding: 1rem;
-      border-radius: 8px;
-      transition: transform 0.2s, box-shadow 0.2s;
+      border: 0.2vw solid #ddd;
+      padding: 2vh;
+      border-radius: 2vw;
+      border: 0.1vw solid #ddd;
+      padding: 1.5vh;
+      border-radius: 1.5vw;
+      background: #fafafa;
+      box-shadow: 0 0.8vh 1.5vh rgba(0,0,0,0.05);
+      box-shadow: 0 0.5vh 1vh rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
+
     .jugador:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transform: translateY(-1vh);
+      box-shadow: 0 1vh 2vh rgba(0,0,0,0.2);
+      transform: translateY(-0.5vh);
+      box-shadow: 0 1vh 2vh rgba(0,0,0,0.15);
     }
 
     .jugador img {
-      width: 100px;
-      height: 100px;
+      width: 12vw;
+      height: 12vw;
+      width: 10vw;
+      height: 10vw;
       border-radius: 50%;
-      border: 3px solid #e4002b;
-      margin-bottom: 0.5rem;
+      border: 0.5vw solid #e4002b;
+      border: 0.3vw solid #e4002b;
+      margin-bottom: 1vh;
       object-fit: cover;
     }
+    .jugador h4 {
+      font-size: 1.4vw;
+      margin-bottom: 0.8vh;
+    }
+    .jugador p {
+      font-size: 1.0vw;
+    }
 
-    /* Tabla */
-    table {
-    /* Tabella Calendario y Resultados migliorata */
     .tabla-partidos {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 1rem;
-      margin-top: 1.5rem;
-      overflow-x: auto;
+      margin-top: 3vh;
+      font-size: 1.3vw;
+      margin-top: 2.5vh;
+      font-size: 1.1vw;
     }
 
-    th, td {
     .tabla-partidos thead {
       background-color: #002f6c;
       color: white;
     }
+
+    .tabla-partidos th,
+    .tabla-partidos td {
+      padding: 1.2vh 1vw;
     .tabla-partidos th, .tabla-partidos td {
-      padding: 0.8rem 1rem;
-      border: 1px solid #ccc;
-      padding: 1rem;
+      padding: 1vh 0.8vw;
+      border: 0.1vw solid #ccc;
       text-align: center;
-      font-size: 0.95rem;
     }
 
-    th {
-      background-color: #002f6c;
-      color: white;
     .tabla-partidos tbody tr:nth-child(even) {
       background-color: #f9f9f9;
     }
+
     .tabla-partidos tbody tr:hover {
       background-color: #f1f1f1;
     }
+
     .proximo {
       font-weight: bold;
       color: #e4002b;
     }
 
-    /* Noticias */
     .noticia {
-      margin-bottom: 2rem;
-      padding: 1rem;
-      background: #f4f4f4;
-      border-left: 5px solid #e4002b;
-    }
-    .noticia h3 {
-      margin-bottom: 0.5rem;
+      margin-bottom: 4vh;
+      padding: 2vh;
+      margin-bottom: 3vh;
+      padding: 1.5vh;
+      background: linear-gradient(90deg, #fce4e4, #fff);
+      border-left: 0.8vw solid #e4002b;
+      border-left: 0.6vw solid #e4002b;
+      box-shadow: 0 0.5vh 1vh rgba(0,0,0,0.05);
     }
 
-    /* Formulario */
-    /* Formulario de contacto */
+    .noticia h3 {
+      margin-bottom: 1vh;
+      font-size: 2vw;
+      margin-bottom: 0.8vh;
+      font-size: 1.8vw;
+    }
+    .noticia p {
+      font-size: 1.1vw;
+    }
+
     form {
-      margin-top: 1rem;
+      margin-top: 3vh;
+      margin-top: 2.5vh;
     }
 
     form label {
       display: block;
-      margin-top: 0.8rem;
+      font-weight: bold;
+      margin-top: 2vh;
+      font-size: 1.5vw;
+      margin-top: 1.5vh;
+      font-size: 1.2vw;
     }
+
     input, textarea {
       width: 100%;
-      padding: 0.8rem;
-      margin-top: 0.5rem;
-      margin-top: 0.3rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
+      padding: 1.5vh;
+      margin-top: 1vh;
+      border: 0.2vw solid #ccc;
+      border-radius: 1vw;
+      font-size: 1.3vw;
+      padding: 1.2vh;
+      margin-top: 0.8vh;
+      border: 0.1vw solid #ccc;
+      border-radius: 0.8vw;
+      font-size: 1.0vw;
     }
 
     input[type="submit"] {
@@ -184,8 +264,15 @@
       border: none;
       cursor: pointer;
       font-weight: bold;
-      padding: 0.8rem 1.2rem;
-      font-size: 1rem;
+      padding: 1.5vh 2vw;
+      font-size: 1.5vw;
+      margin-top: 2vh;
+      border-radius: 1vw;
+      padding: 1.2vh 1.5vw;
+      font-size: 1.2vw;
+      margin-top: 1.5vh;
+      border-radius: 0.8vw;
+      transition: background 0.3s;
     }
 
     input[type="submit"]:hover {
@@ -196,17 +283,69 @@
       background-color: #002f6c;
       color: white;
       text-align: center;
-      padding: 1.5rem;
-      margin-top: 3rem;
+      padding: 3vh 2vw;
+      margin-top: 5vh;
+      font-size: 1.3vw;
+      padding: 2.5vh 2vw;
+      margin-top: 4vh;
+      font-size: 1.1vw;
     }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 6vw;
+      }
+      header p {
+        font-size: 3.5vw;
+      }
+      nav a {
+        font-size: 3vw;
+        margin: 0 3vw;
+      }
+      h2 {
+        font-size: 5vw;
+        border-left-width: 2vw;
+      }
+      p, .tabla-partidos, .noticia p {
+        font-size: 3vw;
+      }
+      .jugador img {
+        width: 20vw;
+        height: 20vw;
+      }
+      .jugador h4 {
+        font-size: 3.5vw;
+      }
+      .jugador p {
+        font-size: 2.5vw;
+      }
+      input, textarea {
+        font-size: 3vw;
+      }
+      input[type="submit"] {
+        font-size: 3vw;
+        padding: 1.5vh 3vw;
+      }
+    }
+
   </style>
 </head>
 <body>
 
   <header>
     <h1>Chivas de Corazón</h1>
-    <p>Pasión por el fútbol mexicano</p>
     <p>Pasión por el fútbol mexicano y tradición rojiblanca</p>
+    <!-- Video di sfondo (sostituisci src con il tuo video) -->
+    <video autoplay muted loop>
+      <source src="tuo-video-sfondo.mp4" type="video/mp4">
+      <!-- fallback immagine -->
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+    <div class="header-content">
+      <h1>Chivas de Corazón</h1>
+      <p>Pasión por el fútbol mexicano y tradición rojiblanca</p>
+    </div>
   </header>
 
   <nav>
@@ -218,72 +357,44 @@
     <a href="#contacto">Contacto</a>
   </nav>
 
-  <!-- Página de inicio -->
   <section id="inicio">
     <h2>Bienvenidos</h2>
-    <p>El Club Deportivo Guadalajara, mejor conocido como Chivas, es uno de los clubes más populares de México. Fundado en 1906, se caracteriza por su tradición y su política de jugar exclusivamente con futbolistas mexicanos.</p>
     <p>El Club Deportivo Guadalajara, comúnmente llamado Chivas, es uno de los equipos más emblemáticos de México. Fundado en 1906, se distingue por su tradición, su identidad mexicana y su afición leal.</p>
   </section>
 
-  <!-- Historia del club -->
   <section id="historia">
     <h2>Historia del Club</h2>
-    <p>Chivas fue fundado en Guadalajara, Jalisco, y ha sido protagonista del fútbol mexicano durante más de un siglo. Ha ganado múltiples títulos de liga y ha sido cuna de grandes figuras del balompié nacional.</p>
-    <p>Con su estadio Akron como fortaleza, el club continúa siendo símbolo de identidad y orgullo para millones de aficionados.</p>
-    <p>Desde sus orígenes en Guadalajara, Jalisco, el club ha atravesado etapas de gloria y adversidad. Las Chivas surgieron con la idea de representar los valores del fútbol mexicano y continuar con esos valores hasta nuestros días. A lo largo del tiempo, se ha consolidado como uno de los clubes con más seguidores y con éxitos memorables.</p>
-    <p>En su historia ha cosechado múltiples campeonatos de liga, copas nacionales y participaciones internacionales. Algunos de sus jugadores más destacados han dejado huella en el deporte nacional. El estadio Akron, su casa moderna, es un símbolo de la evolución y el presente del equipo.</p>
+    <p>Desde sus orígenes en Guadalajara, Jalisco, el club ha atravesado etapas de gloria y adversidad. Las Chivas surgieron con la idea de representar los valores del fútbol mexicano y continuar con esos valores hasta nuestros días.</p>
+    <p>En su historia ha cosechado múltiples campeonatos de liga, copas nacionales y participaciones internacionales. Algunos de sus jugadores más destacados han dejado huella en el deporte nacional.</p>
     <p>Hoy en día, el club busca consolidarse en cada temporada, fomentar la cantera, mantener una identidad sólida y continuar siendo un referente del fútbol mexicano.</p>
   </section>
 
-  <!-- Jugadores -->
   <section id="jugadores">
     <h2>Jugadores Principales</h2>
     <div class="jugadores-grid">
       <div class="jugador">
         <img src="https://via.placeholder.com/100" alt="Alexis Vega">
+        <img src="https://via.placeholder.com/150?text=Vega" alt="Alexis Vega">
         <h4>Alexis Vega</h4>
-        <p>Delantero rápido y habilidoso, clave en el ataque de Chivas.</p>
         <p>Delantero rápido, pieza clave en el ataque rojiblanco.</p>
       </div>
       <div class="jugador">
         <img src="https://via.placeholder.com/100" alt="Armando González">
+        <img src="https://via.placeholder.com/150?text=González" alt="Armando González">
         <h4>Armando González</h4>
-        <p>Goleador joven con gran proyección y olfato goleador.</p>
         <p>Goleador joven con gran instinto ofensivo.</p>
       </div>
       <div class="jugador">
         <img src="https://via.placeholder.com/100" alt="Roberto Alvarado">
+        <img src="https://via.placeholder.com/150?text=Alvarado" alt="Roberto Alvarado">
         <h4>Roberto Alvarado</h4>
-        <p>Extremo talentoso con excelente visión de juego.</p>
         <p>Extremo habilidoso con visión y técnica destacada.</p>
       </div>
     </div>
   </section>
 
-  <!-- Calendario y resultados -->
   <section id="calendario">
     <h2>Calendario y Resultados</h2>
-    <table>
-      <tr>
-        <th>Fecha</th>
-        <th>Partido</th>
-        <th>Resultado</th>
-      </tr>
-      <tr>
-        <td>10 Oct 2025</td>
-        <td>Chivas vs Tigres</td>
-        <td>2 - 1</td>
-      </tr>
-      <tr>
-        <td>17 Oct 2025</td>
-        <td>América vs Chivas</td>
-        <td>1 - 1</td>
-      </tr>
-      <tr>
-        <td>24 Oct 2025</td>
-        <td>Chivas vs Pumas</td>
-        <td>Próximo</td>
-      </tr>
     <table class="tabla-partidos">
       <thead>
         <tr>
@@ -316,7 +427,6 @@
       </tbody>
     </table>
 
-    <!-- Sezione “Upcoming Matches” ispirata al sito ufficiale -->
     <h2>Próximos Partidos</h2>
     <table class="tabla-partidos">
       <thead>
@@ -334,6 +444,7 @@
         </tr>
         <tr>
           <td>31 Jul 2025</td>
+          <td>Chivas vs J1</td>
           <td>Chivas vs J1 (en Red Bull Arena)</td>
           <td>Red Bull Arena</td>
         </tr>
@@ -356,31 +467,20 @@
     </table>
   </section>
 
-  <!-- Noticias -->
   <section id="noticias">
     <h2>Noticias Recientes</h2>
-
     <div class="noticia">
       <h3>¡Victoria importante en casa!</h3>
-      <p>Chivas venció 2-1 a Tigres en el estadio Akron con goles de Vega y González, asegurando una posición clave en la tabla.</p>
       <p>Chivas venció con un marcador 2-1 ante Tigres en un encuentro muy disputado. Vega y González anotaron para asegurar los tres puntos.</p>
     </div>
-
     <div class="noticia">
-      <h3>Alexis Vega podría volver tras lesión</h3>
-      <p>El delantero estrella podría estar disponible para el clásico contra América. El cuerpo médico evalúa su recuperación día a día.</p>
       <h3>La recuperación de Alexis Vega</h3>
       <p>Tras una lesión leve, el cuerpo médico informa que Alexis Vega podría estar listo para el próximo clásico contra América. La afición espera verlo de vuelta al once titular.</p>
     </div>
   </section>
 
-  <!-- Contacto -->
   <section id="contacto">
     <h2>Contacto</h2>
-    <p>¿Tienes preguntas o quieres apoyarnos? ¡Contáctanos!</p>
-    <p>Email: contacto@chivas.com.mx</p>
-    <p>Teléfono: +52 33 1234 5678</p>
-    <p>¿Tienes preguntas, sugerencias o quieres apoyar al club? Escríbenos.</p>
     <p><strong>Email:</strong> contacto@chivas.com.mx</p>
     <p><strong>Teléfono:</strong> +52 33 1234 5678</p>
 
@@ -389,7 +489,6 @@
       <input type="text" id="nombre" name="nombre" required>
 
       <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="
       <input type="email" id="email" name="email" required>
 
       <label for="mensaje">Mensaje:</label>
@@ -402,5 +501,6 @@
   <footer>
     <p>&copy; 2025 Chivas de Corazón. Todos los derechos reservados.</p>
   </footer>
+
 </body>
 </html>

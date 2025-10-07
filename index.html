@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chivas de Corazón</title>
   <style>
-    /* --- Reset y estilos generales --- */
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #fff;
-      color: #333;
       line-height: 1.6;
+      background-color: #fff;
+      color: #333;
     }
 
     header {
@@ -34,16 +33,17 @@
       background-color: #002f6c;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       padding: 1rem;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 1000;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 1.5rem;
+      margin: 0 1.2rem;
       font-weight: bold;
       text-transform: uppercase;
       font-size: 0.9rem;
@@ -54,9 +54,9 @@
     }
 
     section {
-      padding: 3rem 2rem;
       max-width: 1000px;
       margin: auto;
+      padding: 3rem 1.5rem;
     }
 
     h2 {
@@ -65,7 +65,11 @@
       font-size: 1.8rem;
     }
 
-    /* --- Jugadores --- */
+    p {
+      margin-bottom: 1rem;
+    }
+
+    /* Jugadores */
     .jugadores-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -74,15 +78,9 @@
 
     .jugador {
       text-align: center;
-      border: 1px solid #eee;
+      border: 1px solid #ddd;
       padding: 1rem;
-      border-radius: 10px;
-      transition: transform 0.2s;
-    }
-
-    .jugador:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 8px;
     }
 
     .jugador img {
@@ -93,7 +91,7 @@
       margin-bottom: 0.5rem;
     }
 
-    /* --- Calendario --- */
+    /* Tabla */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -101,8 +99,8 @@
     }
 
     th, td {
+      border: 1px solid #ccc;
       padding: 1rem;
-      border: 1px solid #ddd;
       text-align: center;
     }
 
@@ -111,11 +109,45 @@
       color: white;
     }
 
-    footer {
-      text-align: center;
-      background: #002f6c;
-      color: white;
+    /* Noticias */
+    .noticia {
+      margin-bottom: 2rem;
       padding: 1rem;
+      background: #f4f4f4;
+      border-left: 5px solid #e4002b;
+    }
+
+    /* Formulario */
+    form {
+      margin-top: 1rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #e4002b;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #c30025;
+    }
+
+    footer {
+      background-color: #002f6c;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
       margin-top: 3rem;
     }
   </style>
@@ -129,38 +161,51 @@
 
   <nav>
     <a href="#inicio">Inicio</a>
+    <a href="#historia">Historia</a>
     <a href="#jugadores">Jugadores</a>
-    <a href="#calendario">Partidos</a>
+    <a href="#calendario">Calendario</a>
+    <a href="#noticias">Noticias</a>
+    <a href="#contacto">Contacto</a>
   </nav>
 
+  <!-- Página de inicio -->
   <section id="inicio">
     <h2>Bienvenidos</h2>
-    <p>El Club Deportivo Guadalajara, conocido como Chivas, es uno de los equipos más emblemáticos de México. Fundado en 1906, destaca por su política única de jugar solo con futbolistas mexicanos.</p>
+    <p>El Club Deportivo Guadalajara, mejor conocido como Chivas, es uno de los clubes más populares de México. Fundado en 1906, se caracteriza por su tradición y su política de jugar exclusivamente con futbolistas mexicanos.</p>
   </section>
 
+  <!-- Historia del club -->
+  <section id="historia">
+    <h2>Historia del Club</h2>
+    <p>Chivas fue fundado en Guadalajara, Jalisco, y ha sido protagonista del fútbol mexicano durante más de un siglo. Ha ganado múltiples títulos de liga y ha sido cuna de grandes figuras del balompié nacional.</p>
+    <p>Con su estadio Akron como fortaleza, el club continúa siendo símbolo de identidad y orgullo para millones de aficionados.</p>
+  </section>
+
+  <!-- Jugadores -->
   <section id="jugadores">
-    <h2>Jugadores Destacados</h2>
+    <h2>Jugadores Principales</h2>
     <div class="jugadores-grid">
       <div class="jugador">
-        <img src="https://via.placeholder.com/100" alt="Jugador 1">
+        <img src="https://via.placeholder.com/100" alt="Alexis Vega">
         <h4>Alexis Vega</h4>
-        <p>Delantero</p>
+        <p>Delantero rápido y habilidoso, clave en el ataque de Chivas.</p>
       </div>
       <div class="jugador">
-        <img src="https://via.placeholder.com/100" alt="Jugador 2">
-        <h4>Roberto Alvarado</h4>
-        <p>Extremo</p>
-      </div>
-      <div class="jugador">
-        <img src="https://via.placeholder.com/100" alt="Jugador 3">
+        <img src="https://via.placeholder.com/100" alt="Armando González">
         <h4>Armando González</h4>
-        <p>Delantero</p>
+        <p>Goleador joven con gran proyección y olfato goleador.</p>
+      </div>
+      <div class="jugador">
+        <img src="https://via.placeholder.com/100" alt="Roberto Alvarado">
+        <h4>Roberto Alvarado</h4>
+        <p>Extremo talentoso con excelente visión de juego.</p>
       </div>
     </div>
   </section>
 
+  <!-- Calendario y resultados -->
   <section id="calendario">
-    <h2>Calendario de Partidos</h2>
+    <h2>Calendario y Resultados</h2>
     <table>
       <tr>
         <th>Fecha</th>
@@ -168,26 +213,48 @@
         <th>Resultado</th>
       </tr>
       <tr>
-        <td>10 Octubre 2025</td>
+        <td>10 Oct 2025</td>
         <td>Chivas vs Tigres</td>
-        <td>2-1</td>
+        <td>2 - 1</td>
       </tr>
       <tr>
-        <td>17 Octubre 2025</td>
+        <td>17 Oct 2025</td>
         <td>América vs Chivas</td>
-        <td>1-1</td>
+        <td>1 - 1</td>
       </tr>
       <tr>
-        <td>24 Octubre 2025</td>
+        <td>24 Oct 2025</td>
         <td>Chivas vs Pumas</td>
         <td>Próximo</td>
       </tr>
     </table>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Chivas de Corazón. Todos los derechos reservados.</p>
-  </footer>
+  <!-- Noticias -->
+  <section id="noticias">
+    <h2>Noticias Recientes</h2>
 
-</body>
-</html>
+    <div class="noticia">
+      <h3>¡Victoria importante en casa!</h3>
+      <p>Chivas venció 2-1 a Tigres en el estadio Akron con goles de Vega y González, asegurando una posición clave en la tabla.</p>
+    </div>
+
+    <div class="noticia">
+      <h3>Alexis Vega podría volver tras lesión</h3>
+      <p>El delantero estrella podría estar disponible para el clásico contra América. El cuerpo médico evalúa su recuperación día a día.</p>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes preguntas o quieres apoyarnos? ¡Contáctanos!</p>
+    <p>Email: contacto@chivas.com.mx</p>
+    <p>Teléfono: +52 33 1234 5678</p>
+
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="

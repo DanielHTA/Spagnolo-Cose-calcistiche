@@ -136,40 +136,71 @@ h2 {
   margin-bottom: 2rem;
 }
 
-/* TABLES */
-.tabla-partidos {
-  width: 100%;
-  border-collapse: collapse;
+/* DYNAMIC CALENDAR */
+.calendario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
   margin-top: 1rem;
-  border-radius: 0.8rem;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
 }
 
-.tabla-partidos th, .tabla-partidos td {
-  border: 1px solid #ddd;
-  padding: 0.75rem 1.25rem;
-  text-align: center;
-  transition: background 0.3s;
+.partido {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.tabla-partidos thead {
-  background: linear-gradient(90deg, #002f6c, #001f4d);
-  color: white;
+.partido:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 
-.tabla-partidos tbody tr:nth-child(even) {
-  background-color: #f8f8f8;
+.partido .fecha {
+  font-weight: 600;
+  color: #002f6c;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
 }
 
-.tabla-partidos tbody tr.proximo {
+.partido .equipos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.partido .vs {
   font-weight: 700;
   color: #e4002b;
 }
 
-.tabla-partidos tbody tr:hover {
-  background-color: #f1f1f1;
-  transform: scale(1.02);
+.partido .resultado {
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.partido.proximo .resultado {
+  background: linear-gradient(135deg, #ff4d4d, #e4002b);
+  color: white;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 10px rgba(228,0,43,0.4);}
+  50% { transform: scale(1.03); box-shadow: 0 0 20px rgba(228,0,43,0.6);}
+  100% { transform: scale(1); box-shadow: 0 0 10px rgba(228,0,43,0.4);}
 }
 
 /* NOTICIAS */
@@ -229,54 +260,7 @@ h2 {
   color: #e4002b;
 }
 
-/* JUGADORES */
-.jugadores-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-}
-
-.jugador {
-  background: rgba(255,255,255,0.95);
-  border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  text-align: center;
-  padding: 1.2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.jugador:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-.jugador img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 3px solid #e4002b;
-  object-fit: cover;
-  margin-bottom: 0.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.jugador img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.jugador h4 {
-  font-size: 1.2rem;
-  margin-bottom: 0.3rem;
-  font-weight: 600;
-}
-
-.jugador p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* FORMULARIO CONTACTO */
+/* CONTACTO */
 form {
   display: flex;
   flex-direction: column;

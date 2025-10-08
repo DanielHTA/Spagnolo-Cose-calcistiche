@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #fff;
+  background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
   font-size: 16px;
@@ -22,7 +22,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 a:hover {
@@ -39,8 +39,9 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
 .navbar .logo img {
@@ -49,7 +50,7 @@ a:hover {
 }
 
 .navbar .logo img:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .navbar ul {
@@ -63,19 +64,19 @@ a:hover {
   font-weight: 600;
   text-transform: uppercase;
   padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   transition: all 0.3s;
 }
 
 .navbar ul li a.active,
 .navbar ul li a:hover {
   background-color: #e4002b;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(228,0,43,0.3);
 }
 
 /* HERO SECTION */
 .hero {
-  height: 60vh;
+  height: 70vh;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -85,13 +86,15 @@ a:hover {
   text-align: center;
   color: white;
   overflow: hidden;
+  border-radius: 0 0 2rem 2rem;
 }
 
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(228, 0, 43, 0.6);
+  background: rgba(228, 0, 43, 0.5);
+  backdrop-filter: blur(2px);
   transition: background 0.3s;
 }
 
@@ -106,12 +109,13 @@ a:hover {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  text-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .hero p {
   font-size: 1.5rem;
   font-weight: 400;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 /* SECTIONS */
@@ -129,7 +133,7 @@ h2 {
   color: #e4002b;
   border-left: 0.5rem solid #e4002b;
   padding-left: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 /* TABLES */
@@ -137,33 +141,35 @@ h2 {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border-radius: 0.8rem;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
 }
 
 .tabla-partidos th, .tabla-partidos td {
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   padding: 0.75rem 1.25rem;
   text-align: center;
   transition: background 0.3s;
 }
 
 .tabla-partidos thead {
-  background-color: #002f6c;
+  background: linear-gradient(90deg, #002f6c, #001f4d);
   color: white;
 }
 
 .tabla-partidos tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #f8f8f8;
 }
 
 .tabla-partidos tbody tr.proximo {
-  font-weight: bold;
+  font-weight: 700;
   color: #e4002b;
 }
 
 .tabla-partidos tbody tr:hover {
   background-color: #f1f1f1;
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 
 /* NOTICIAS */
@@ -174,22 +180,27 @@ h2 {
 }
 
 .noticia-card {
-  background-color: #fff;
-  border-radius: 0.5rem;
+  background: rgba(255,255,255,0.9);
+  border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .noticia-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .noticia-card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.noticia-card img:hover {
+  transform: scale(1.05);
 }
 
 .noticia-content {
@@ -197,7 +208,7 @@ h2 {
 }
 
 .noticia-content h3 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
@@ -226,17 +237,17 @@ h2 {
 }
 
 .jugador {
-  background-color: #fff;
-  border-radius: 0.5rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.95);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   text-align: center;
-  padding: 1rem;
+  padding: 1.2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .jugador:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .jugador img {
@@ -246,11 +257,12 @@ h2 {
   border: 3px solid #e4002b;
   object-fit: cover;
   margin-bottom: 0.5rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .jugador img:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .jugador h4 {
@@ -278,13 +290,14 @@ form label {
 form input, form textarea {
   padding: 0.8rem;
   border: 1px solid #ccc;
-  border-radius: 0.4rem;
+  border-radius: 0.6rem;
   font-size: 1rem;
-  transition: border 0.3s;
+  transition: border 0.3s, box-shadow 0.3s;
 }
 
 form input:focus, form textarea:focus {
   border-color: #e4002b;
+  box-shadow: 0 0 8px rgba(228,0,43,0.3);
   outline: none;
 }
 
@@ -294,12 +307,13 @@ form input[type="submit"] {
   font-weight: bold;
   border: none;
   cursor: pointer;
+  border-radius: 0.6rem;
   transition: background 0.3s, transform 0.2s;
 }
 
 form input[type="submit"]:hover {
   background-color: #c30025;
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 /* FOOTER */
@@ -309,6 +323,8 @@ footer {
   padding: 2rem 1rem;
   text-align: center;
   font-size: 0.95rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
 }
 
 footer .footer-links a {

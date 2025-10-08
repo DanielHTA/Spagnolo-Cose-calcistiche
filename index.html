@@ -1,4 +1,22 @@
 <!DOCTYPE html>
+<section id="calendario">
+<h2>Calendario y Resultados</h2>
+<table class="tabla-partidos">
+<thead>
+<tr>
+<th>Fecha</th>
+<th>Partido</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>10 Oct 2025</td><td>Chivas vs Tigres</td><td>2 - 1</td></tr>
+<tr><td>17 Oct 2025</td><td>América vs Chivas</td><td>1 - 1</td></tr>
+<tr class="proximo"><td>24 Oct 2025</td><td>Chivas vs Pumas</td><td>Próximo</td></tr>
+<tr class="proximo"><td>01 Nov 2025</td><td>Pachuca vs Chivas</td><td>Próximo</td></tr>
+</tbody>
+</table>
+</section>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -6,14 +24,18 @@
   <title>CD Guadalajara - Inicio</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CD Guadalajara - Inicio</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo">
       <a href="index.html">
-        <img src="https://logos-world.net/wp-content/uploads/2024/01/Chivas-club-Logo-2010.png" alt="CD Guadalajara Logo">
-      </a>
+        <img src="https://logos-world.net/wp-content/uploads/2024/01/Chivas-club-Logo-2010.png" alt="CD Guadalajara Logo">      </a>
     </div>
     <ul>
       <li><a href="index.html" class="active">Inicio</a></li>
@@ -30,6 +52,36 @@
     </div>
   </section>
 
+<!-- NOTICIAS -->
+<section id="noticias">
+<h2>Noticias Recientes</h2>
+<div class="noticias-grid">
+<div class="noticia-card">
+<img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/full/public/2024-09/ChivasCelebracion.jpg" alt="Chivas Celebración">
+<div class="noticia-content">
+<h3>Chivas vence a Tigres en un duelo vibrante</h3>
+<p>El Rebaño se impuso 2-1 en casa ante Tigres, con goles de Vega y Cisneros, mostrando una gran actuación colectiva.</p>
+<a href="#">Leer más →</a>
+</div>
+</div>
+<div class="noticia-card">
+<img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/full/public/2024-08/EntrenamientoChivas.jpg" alt="Entrenamiento">
+<div class="noticia-content">
+<h3>Preparación rumbo al Clásico Nacional</h3>
+<p>El equipo entrena a doble sesión para enfrentar al Club América con estrategia y determinación.</p>
+<a href="#">Leer más →</a>
+</div>
+</div>
+<div class="noticia-card">
+<img src="https://www.chivasdecorazon.com.mx/sites/default/files/styles/full/public/2024-07/AficionChivas.jpg" alt="Afición">
+<div class="noticia-content">
+<h3>La afición rojiblanca se hace sentir</h3>
+<p>Chivas cuenta con la hinchada más grande del país, llenando estadios y alentando sin cesar.</p>
+<a href="#">Leer más →</a>
+</div>
+</div>
+</div>
+</section>
   <!-- BIENVENIDA -->
   <section>
     <h2>Bienvenidos</h2>
@@ -39,49 +91,29 @@
   <!-- CALENDARIO Y RESULTADOS -->
   <section id="calendario">
     <h2>Calendario y Resultados</h2>
-    <div class="calendario-grid">
-      <div class="partido">
-        <div class="fecha">10 Oct 2025</div>
-        <div class="equipos">
-          <span class="local">Chivas</span> 
-          <span class="vs">vs</span> 
-          <span class="visitante">Tigres</span>
-        </div>
-        <div class="resultado">2 - 1</div>
-      </div>
-
-      <div class="partido">
-        <div class="fecha">17 Oct 2025</div>
-        <div class="equipos">
-          <span class="local">América</span> 
-          <span class="vs">vs</span> 
-          <span class="visitante">Chivas</span>
-        </div>
-        <div class="resultado">1 - 1</div>
-      </div>
-
-      <div class="partido proximo">
-        <div class="fecha">24 Oct 2025</div>
-        <div class="equipos">
-          <span class="local">Chivas</span> 
-          <span class="vs">vs</span> 
-          <span class="visitante">Pumas</span>
-        </div>
-        <div class="resultado">Próximo</div>
-      </div>
-
-      <div class="partido proximo">
-        <div class="fecha">01 Nov 2025</div>
-        <div class="equipos">
-          <span class="local">Pachuca</span> 
-          <span class="vs">vs</span> 
-          <span class="visitante">Chivas</span>
-        </div>
-        <div class="resultado">Próximo</div>
-      </div>
-    </div>
+    <table class="tabla-partidos">
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Partido</th>
+          <th>Resultado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>10 Oct 2025</td><td>Chivas vs Tigres</td><td>2 - 1</td></tr>
+        <tr><td>17 Oct 2025</td><td>América vs Chivas</td><td>1 - 1</td></tr>
+        <tr class="proximo"><td>24 Oct 2025</td><td>Chivas vs Pumas</td><td>Próximo</td></tr>
+        <tr class="proximo"><td>01 Nov 2025</td><td>Pachuca vs Chivas</td><td>Próximo</td></tr>
+      </tbody>
+    </table>
   </section>
 
+<!-- CONTACTO -->
+<section id="contacto">
+<h2>Contacto</h2>
+<form>
+<label for="nombre">Nombre:</label>
+<input type="text" id="nombre" name="nombre" required>
   <!-- NOTICIAS -->
   <section id="noticias">
     <h2>Noticias Recientes</h2>
@@ -120,16 +152,41 @@
       <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" required>
 
+<label for="correo">Correo electrónico:</label>
+<input type="email" id="correo" name="correo" required>
       <label for="correo">Correo electrónico:</label>
       <input type="email" id="correo" required>
 
       <label for="mensaje">Mensaje:</label>
       <textarea id="mensaje" rows="4" required></textarea>
 
+<label for="mensaje">Mensaje:</label>
+<textarea id="mensaje" name="mensaje" rows="4" required></textarea>
       <input type="submit" value="Enviar">
     </form>
   </section>
 
+
+<input type="submit" value="Enviar">
+</form>
+</section>
+</main>
+
+
+<footer>
+<div class="footer-content">
+<div class="footer-links">
+<a href="index.html">Inicio</a>
+<a href="historia.html">Historia</a>
+<a href="jugadores.html">Jugadores</a>
+</div>
+<p class="footer-copy">© 2025 CD Guadalajara. Todos los derechos reservados.</p>
+</div>
+</footer>
+
+
+</body>
+</html>
   <!-- FOOTER -->
   <footer>
     <div class="footer-content">
@@ -141,5 +198,3 @@
       <p class="footer-copy">© 2025 CD Guadalajara. Todos los derechos reservados.</p>
     </div>
   </footer>
-</body>
-</html>

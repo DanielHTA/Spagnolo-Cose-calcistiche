@@ -30,7 +30,7 @@ a {
 }
 
 a:hover {
-    color: #e4002b;
+    color: #fbbc00; /* Yellow on hover */
 }
 
 /* ==============================
@@ -40,7 +40,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #002f6c;
+    background-color: #6a1e9c; /* Purple background for the navbar */
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
@@ -75,7 +75,7 @@ a:hover {
 
 .navbar ul li a.active,
 .navbar ul li a:hover {
-    background-color: #e4002b;
+    background-color: #fbbc00; /* Yellow on active or hover */
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
@@ -99,7 +99,7 @@ a:hover {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(228, 0, 43, 0.6);
+    background: rgba(106, 30, 156, 0.6); /* Purple overlay for consistency */
     transition: background 0.3s;
 }
 
@@ -138,8 +138,8 @@ section {
 h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.2rem;
-    color: #e4002b;
-    border-left: 0.5rem solid #e4002b;
+    color: #fbbc00; /* Yellow color for titles */
+    border-left: 0.5rem solid #fbbc00; /* Yellow bar for emphasis */
     padding-left: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -169,7 +169,7 @@ h2 {
 
 .calendario-card .fecha {
     font-weight: 700;
-    color: #002f6c;
+    color: #6a1e9c; /* Purple for the date */
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
 }
@@ -182,7 +182,7 @@ h2 {
 
 .calendario-card .partido span {
     margin: 0 0.3rem;
-    color: #e4002b;
+    color: #fbbc00; /* Yellow for team names */
 }
 
 .calendario-card .resultado {
@@ -192,8 +192,8 @@ h2 {
 }
 
 .calendario-card.proximo {
-    border: 2px solid #e4002b;
-    color: #e4002b;
+    border: 2px solid #fbbc00; /* Yellow border for upcoming matches */
+    color: #fbbc00;
 }
 
 @media (max-width: 768px) {
@@ -201,6 +201,7 @@ h2 {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
 }
+
 /* ==============================
    NOTICIAS
    ============================== */
@@ -247,12 +248,12 @@ h2 {
 
 .noticia-content a {
     font-weight: bold;
-    color: #002f6c;
+    color: #6a1e9c; /* Purple for links */
     transition: color 0.3s;
 }
 
 .noticia-content a:hover {
-    color: #e4002b;
+    color: #fbbc00; /* Yellow on hover */
 }
 
 /* ==============================
@@ -282,7 +283,7 @@ h2 {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 3px solid #e4002b;
+    border: 3px solid #fbbc00; /* Yellow border around player's image */
     object-fit: cover;
     margin-bottom: 0.5rem;
     transition: transform 0.3s ease;
@@ -327,12 +328,12 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-    border-color: #e4002b;
+    border-color: #fbbc00; /* Yellow focus border */
     outline: none;
 }
 
 form input[type="submit"] {
-    background-color: #e4002b;
+    background-color: #fbbc00; /* Yellow background for the submit button */
     color: white;
     font-weight: bold;
     border: none;
@@ -341,7 +342,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #c30025;
+    background-color: #f2a400; /* Darker yellow on hover */
     transform: scale(1.03);
 }
 
@@ -349,7 +350,7 @@ form input[type="submit"]:hover {
    FOOTER
    ============================== */
 footer {
-    background-color: #002f6c;
+    background-color: #6a1e9c; /* Purple footer */
     color: white;
     padding: 2rem 1rem;
     text-align: center;
@@ -363,7 +364,7 @@ footer .footer-links a {
 }
 
 footer .footer-links a:hover {
-    color: #e4002b;
+    color: #fbbc00; /* Yellow on hover */
 }
 
 footer .footer-copy {
